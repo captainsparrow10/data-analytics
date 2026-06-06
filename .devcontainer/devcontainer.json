@@ -18,7 +18,8 @@
         "ms-python.vscode-pylance",
         "ms-python.debugpy",
         "ms-toolsai.jupyter",
-        "charliermarsh.ruff"
+        "charliermarsh.ruff",
+        "github.vscode-pull-request-github"
       ],
       "settings": {
         // 🌟 Le dice a VS Code que use el entorno virtual que creará Poetry
