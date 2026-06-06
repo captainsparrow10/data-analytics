@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "data-analytics-book"
+version = "0.1.0"
+description = "Entorno para libro de Data Analysis"
+authors = ["Sparrow <javier1009rm@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+# Aquí puedes dejarlo vacío por ahora, luego añadirás cosas con 'poetry add'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

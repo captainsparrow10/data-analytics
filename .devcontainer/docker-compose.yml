@@ -1,0 +1,21 @@
+services:
+  # El contenedor donde vas a programar
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    network_mode: service:db # Hace que compartan la misma red fácilmente
+    command: sleep infinity
+
+  # El contenedor de tu Base de Datos
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: sparrow
+      POSTGRES_PASSWORD: 1009
+      POSTGRES_DB: data_analysis_db
+    ports:
+      - "5432:5432"
