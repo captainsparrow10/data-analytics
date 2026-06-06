@@ -3,9 +3,18 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
   "workspaceFolder": "/workspace",
-  
-  // Sin features externas — instalamos Poetry manualmente
-  "features": {},
+
+  // Persiste el login/config de Claude Code (~/.claude) en un volumen, así tu
+  // sesión sobrevive a los rebuilds del contenedor (no hay que re-loguear).
+  "mounts": [
+    "source=claude-code-config-${devcontainerId},target=/home/vscode/.claude,type=volume"
+  ],
+
+  // Feature oficial de Anthropic: instala el CLI de Claude Code (trae Node.js
+  // por dentro) y registra la extensión de VS Code automáticamente.
+  "features": {
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+  },
 
   "customizations": {
     "vscode": {
@@ -19,7 +28,8 @@
         "ms-python.debugpy",
         "ms-toolsai.jupyter",
         "charliermarsh.ruff",
-        "github.vscode-pull-request-github"
+        "github.vscode-pull-request-github",
+        "anthropic.claude-code"
       ],
       "settings": {
         // 🌟 Le dice a VS Code que use el entorno virtual que creará Poetry
