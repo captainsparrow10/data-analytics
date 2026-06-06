@@ -9,9 +9,16 @@
 
   "customizations": {
     "vscode": {
+      // Extensiones declarativas: se reinstalan SOLAS en cada build, así no se
+      // pierden al rebuildear/recrear el contenedor ni al limpiar volúmenes.
+      // Para sumar una nueva: instalala y en el panel de Extensions hacé
+      // clic derecho -> "Add to devcontainer.json" (o agregá el ID aquí).
       "extensions": [
         "ms-python.python",
-        "ms-toolsai.jupyter"
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "ms-toolsai.jupyter",
+        "charliermarsh.ruff"
       ],
       "settings": {
         // 🌟 Le dice a VS Code que use el entorno virtual que creará Poetry
