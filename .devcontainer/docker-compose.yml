@@ -17,5 +17,7 @@ services:
       POSTGRES_USER: sparrow
       POSTGRES_PASSWORD: 1009
       POSTGRES_DB: data_analysis_db
-    ports:
-      - "5432:5432"
+    # Sin "ports": la DB NO se publica en el host, así no choca con nada que
+    # cada quien tenga local. Desde el contenedor app (network_mode: service:db)
+    # se accede en localhost:5432 igual que siempre. Si alguna vez querés
+    # conectarte desde tu máquina, agregá: ports: ["5433:5432"].
