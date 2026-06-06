@@ -60,6 +60,54 @@ These conventions keep every file runnable unattended and verifiable.
    random *by design* and therefore produce different output each run — this is noted in
    their docstrings.
 
+## Database (isolated, inside the devcontainer)
+
+The devcontainer (`.devcontainer/docker-compose.yml`) starts two containers together:
+`app` (where you work) and `db` (PostgreSQL 15). The database is **not published to the
+host** — it has no `ports` mapping — so it is reachable **only from inside the
+devcontainer**, never from your machine or anyone else's. It is a fully isolated
+environment. Data persists across rebuilds in the named Docker volume `pgdata`.
+
+Because `app` shares the db container's network namespace (`network_mode: service:db`),
+the database lives at `localhost:5432`. The connection string is provided to `app` via
+the `DATABASE_URL` environment variable and wrapped in a small typed helper:
+
+```python
+import pandas as pd
+from database import get_engine
+
+df = pd.read_sql("SELECT * FROM my_table", get_engine())
+df.to_sql("my_table", get_engine(), if_exists="replace", index=False)
+```
+
+Smoke-test the connection from inside the devcontainer:
+
+```bash
+python database/connection.py   # prints the PostgreSQL server version
+```
+
+| setting  | value                |
+|----------|----------------------|
+| host     | `localhost`          |
+| port     | `5432`               |
+| user     | `sparrow`            |
+| password | `1009`               |
+| database | `data_analysis_db`   |
+
+> Want to connect from your host (e.g. DBeaver)? It is intentionally closed off. Add
+> `ports: ["5433:5432"]` to the `db` service and use `localhost:5433` — but that breaks
+> the "isolated" guarantee, so only do it if you really need host access.
+
+## Dependencies
+
+Managed with Poetry. The data stack (numpy, pandas, matplotlib, IPython, Jupyter, SciPy,
+scikit-learn, statsmodels) plus `psycopg2-binary` are declared in `pyproject.toml`. The
+devcontainer installs them automatically on creation (`poetry install`). To add more:
+
+```bash
+poetry add <package>
+```
+
 ## Type checking
 
 The project is checked with [pyright](https://github.com/microsoft/pyright) in

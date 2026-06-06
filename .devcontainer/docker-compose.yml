@@ -6,8 +6,14 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ..:/workspace:cached
-    network_mode: service:db # Hace que compartan la misma red fácilmente
+    network_mode: service:db # Comparte la red del db -> la DB está en localhost:5432
     command: sleep infinity
+    depends_on:
+      - db
+    environment:
+      # La app lee la conexión desde aquí (ver database/connection.py).
+      # host = localhost porque app comparte el namespace de red del db.
+      DATABASE_URL: postgresql+psycopg2://sparrow:1009@localhost:5432/data_analysis_db
 
   # El contenedor de tu Base de Datos
   db:
@@ -17,7 +23,14 @@ services:
       POSTGRES_USER: sparrow
       POSTGRES_PASSWORD: 1009
       POSTGRES_DB: data_analysis_db
+    volumes:
+      # Volumen nombrado: los datos persisten entre rebuilds del devcontainer,
+      # pero viven DENTRO de Docker (no en una carpeta del host) -> sigue aislado.
+      - pgdata:/var/lib/postgresql/data
     # Sin "ports": la DB NO se publica en el host, así no choca con nada que
-    # cada quien tenga local. Desde el contenedor app (network_mode: service:db)
-    # se accede en localhost:5432 igual que siempre. Si alguna vez querés
+    # cada quien tenga local y queda 100% aislada dentro del devcontainer.
+    # Desde el contenedor app se accede en localhost:5432. Si alguna vez querés
     # conectarte desde tu máquina, agregá: ports: ["5433:5432"].
+
+volumes:
+  pgdata:
