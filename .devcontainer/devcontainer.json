@@ -16,6 +16,14 @@
     "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
   },
 
+  // Reusa tu cuenta sin login interactivo: toma CLAUDE_CODE_OAUTH_TOKEN del
+  // host (NO se hardcodea en git) y lo inyecta en el contenedor. Generá el
+  // token en tu Mac con `claude setup-token` y exportá esa variable donde
+  // VS Code la pueda ver (ver README / nota).
+  "containerEnv": {
+    "CLAUDE_CODE_OAUTH_TOKEN": "${localEnv:CLAUDE_CODE_OAUTH_TOKEN}"
+  },
+
   "customizations": {
     "vscode": {
       // Extensiones declarativas: se reinstalan SOLAS en cada build, así no se
