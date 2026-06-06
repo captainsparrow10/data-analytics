@@ -9,6 +9,13 @@ readme = "README.md"
 python = "^3.11"
 # Aquí puedes dejarlo vacío por ahora, luego añadirás cosas con 'poetry add'
 
+[tool.pyright]
+# Strict type checking travels with the repo so the editor (Pylance) and any CI
+# enforce the same rules. Every file under cap_01_built-in is kept at 0 errors.
+include = ["cap_01_built-in"]
+typeCheckingMode = "strict"
+pythonVersion = "3.11"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
