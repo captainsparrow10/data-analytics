@@ -8,6 +8,13 @@ that way.
 
 The exercises are adapted from the [PYnative](https://pynative.com/) practice sets.
 
+## Chapters
+
+| # | Chapter | Index |
+|---|---------|-------|
+| 1 | Python Built-ins | [cap_01_built-in/](cap_01_built-in/README.md) |
+| 2 | NumPy Basics: Arrays and Vectorized Computation | [cap_02_numpy/](cap_02_numpy/README.md) |
+
 ## Chapter 1 — Built-ins (`cap_01_built-in/`)
 
 ```
