@@ -13,16 +13,16 @@ solution is written that way.
 
 ## Index
 
-> Files are added as the chapter progresses. Planned structure:
+The full chapter, in book order, across six runnable files:
 
-| File | Topic | Status |
-|------|-------|--------|
-| `1-ndarray-basics.py` | Creating arrays, dtypes, shape, arithmetic | ⏳ planned |
-| `2-indexing-slicing.py` | Basic/boolean/fancy indexing, transposing axes | ⏳ planned |
-| `3-universal-functions.py` | ufuncs: fast element-wise functions | ⏳ planned |
-| `4-array-oriented.py` | `where`, stats, boolean methods, sorting, set logic | ⏳ planned |
-| `5-linear-algebra.py` | `dot`, matrix ops, `numpy.linalg` | ⏳ planned |
-| `6-random-and-walks.py` | Pseudorandom generation, the random-walk example | ⏳ planned |
+| File | Topic | Book section | Status |
+|------|-------|--------------|--------|
+| `1-ndarray-basics.py` | Creating arrays, dtypes, shape, arithmetic | 4.1 | ✅ done |
+| `2-indexing-slicing.py` | Basic/boolean/fancy indexing, transposing axes | 4.1 | ✅ done |
+| `3-universal-functions.py` | ufuncs: fast element-wise functions | 4.3 | ✅ done |
+| `4-array-oriented.py` | `where`, stats, boolean methods, sorting, set logic, file I/O | 4.4–4.5 | ✅ done |
+| `5-linear-algebra.py` | `dot`, `@`, matrix ops, `numpy.linalg` | 4.6 | ✅ done |
+| `6-random-and-walks.py` | Pseudorandom generation, the random-walk example | 4.2, 4.7 | ✅ done |
 
 ## Running
 
