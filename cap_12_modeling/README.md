@@ -23,6 +23,7 @@ The full chapter, in strict book order (12.1 → 12.4), one file per sub-section
 | `2-patsy-formulas.py` | Patsy: `dmatrices`, no-intercept, `standardize`/`center`/`I()`, `build_design_matrices`, `C()` & interactions | 12.2 | ✅ done |
 | `3-statsmodels.py` | statsmodels: OLS (array & formula APIs), `summary`/`params`/`tvalues`, AR time series (`AutoReg`) | 12.3 | ✅ done |
 | `4-scikit-learn.py` | scikit-learn: impute, encode, `LogisticRegression`, `LogisticRegressionCV`, `cross_val_score` | 12.4 | ✅ done |
+| `exercises.py` | Practice exercises: model matrices, `get_dummies`, scaling, OLS (array & formula), train/test split, `LinearRegression`/`LogisticRegression`, `cross_val_score` | — | ✅ done |
 
 ## Running
 

@@ -27,6 +27,7 @@ The full chapter, in strict book order (11.1 → 11.7), one file per sub-section
 | `5-periods.py` | `Period`/`period_range`, `PeriodIndex`, `asfreq`, quarterly frequencies, `to_period`/`to_timestamp` | 11.5 | ✅ done |
 | `6-resampling.py` | `resample` API, downsampling (OHLC, `closed`/`label`), upsampling (`asfreq`/`ffill`), `pd.Grouper` | 11.6 | ✅ done |
 | `7-moving-window-functions.py` | `rolling` (`min_periods`, offset window), `expanding`, `ewm`, rolling `corr`, `rolling().apply` | 11.7 | ✅ done |
+| `exercises.py` | Practice exercises | — | ✅ done |
 
 ## Running
 

@@ -21,6 +21,7 @@ The full chapter, in strict book order (8.1 → 8.3), one file per sub-section:
 | `2-merge-and-join.py` | `pd.merge` (`on`, `left_on`/`right_on`, `how`, many-to-many, multiple keys, `suffixes`), merging on index, `DataFrame.join` | 8.2 | ✅ done |
 | `3-concatenate-and-combine.py` | `np.concatenate` vs `pd.concat` (`axis`, `join`, `keys`, `ignore_index`), `np.where` + `combine_first` | 8.2 | ✅ done |
 | `4-reshaping-pivoting.py` | `stack`/`unstack` in depth, `pivot` (long → wide), `melt` (wide → long) | 8.3 | ✅ done |
+| `exercises.py` | Practice exercises | 8.1–8.3 | ✅ done |
 
 ## Running
 

@@ -26,6 +26,7 @@ The full chapter, in strict book order (10.1 → 10.5), one file per sub-section
 | `3-apply-split-apply-combine.py` | general `apply`, `group_keys=False`, quantile/bucket (`cut`/`qcut`), fill NA per group, sampling, weighted average/correlation, group-wise OLS | 10.3 | ✅ done |
 | `4-group-transforms.py` | `transform` (broadcast & same-shape), normalization, "unwrapped" group operations | 10.4 | ✅ done |
 | `5-pivot-tables-crosstab.py` | `pivot_table` (`margins`, `aggfunc`, `fill_value`) and `pd.crosstab` | 10.5 | ✅ done |
+| `exercises.py` | Practice exercises | — | ✅ done |
 
 ## Running
 

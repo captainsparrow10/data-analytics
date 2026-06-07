@@ -25,6 +25,7 @@ The full chapter, in strict book order (7.1 → 7.5), one file per sub-section:
 | `4-extension-data-types.py` | Nullable `Int64`/`boolean`/`string`, `pd.NA`, `astype`, Arrow-backed dtypes | 7.3 | ✅ done |
 | `5-string-manipulation.py` | Built-in string methods, `re` (split/findall/match/sub/groups), pandas `.str` accessor | 7.4 | ✅ done |
 | `6-categorical-data.py` | Dimension tables, `Categorical`/`from_codes`, computations (`qcut`/groupby), `.cat` methods | 7.5 | ✅ done |
+| `exercises.py` | Practice exercises | — | ✅ done |
 
 ## Running
 

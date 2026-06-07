@@ -21,6 +21,7 @@ The appendix in strict book order (A.1 → A.6), one file per sub-section:
 | `4-advanced-ufuncs.py` | ufunc methods `reduce`/`accumulate`/`outer`/`reduceat`, writing ufuncs (`frompyfunc`, `vectorize`) | A.4 | ✅ done |
 | `5-structured-arrays.py` | Structured dtypes, field access, nested & multidimensional fields, why use them | A.5 | ✅ done |
 | `6-sorting.py` | In-place vs copy sorts, `argsort`/`lexsort`, stable `mergesort`, `partition`/`argpartition`, `searchsorted` | A.6 | ✅ done |
+| `exercises.py` | Practice exercises | A.1–A.6 | ✅ done |
 
 ## Running
 

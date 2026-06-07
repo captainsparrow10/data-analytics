@@ -27,6 +27,7 @@ The full chapter, in strict book order (6.1 → 6.4), one file per sub-section:
 | `3-binary-formats.py` | pickle, Microsoft Excel (`ExcelFile`/`ExcelWriter`/`read_excel`), HDF5 (`HDFStore`/`to_hdf`/`read_hdf`) | 6.2 | ✅ done |
 | `4-web-apis.py` | GitHub-issues `requests` example (live call shown, parsed offline) | 6.3 | ✅ done |
 | `5-databases.py` | SQLite via `sqlite3`, then SQLAlchemy + `read_sql` | 6.4 | ✅ done |
+| `exercises.py` | Practice exercises | — | ✅ done |
 
 ## Running
 
