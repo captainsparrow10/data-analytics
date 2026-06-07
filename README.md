@@ -19,6 +19,7 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 | 7 | Data Cleaning and Preparation | [cap_07_cleaning/](cap_07_cleaning/README.md) |
 | 8 | Data Wrangling: Join, Combine, and Reshape | [cap_08_wrangling/](cap_08_wrangling/README.md) |
 | 9 | Plotting and Visualization | [cap_09_plotting/](cap_09_plotting/README.md) |
+| 10 | Data Aggregation and Group Operations | [cap_10_groupby/](cap_10_groupby/README.md) |
 
 ## Chapter 1 — Built-ins (`cap_03_built-in/`)
 
@@ -99,6 +100,17 @@ cap_09_plotting/
 ```
 
 > Headless: figures are saved into a temp dir (never shown), and nothing is left in the repo.
+
+## Chapter 10 — group operations (`cap_10_groupby/`)
+
+```
+cap_10_groupby/
+├── 1-groupby-mechanics.py            # split-apply-combine, keys/arrays/columns, iterate, select, dict/Series/function keys, level (10.1)
+├── 2-data-aggregation.py             # optimized methods, custom/multiple/named agg (list/dict/tuples), as_index=False/reset_index    (10.2)
+├── 3-apply-split-apply-combine.py    # general apply, group_keys=False, cut/qcut buckets, fill NA, sampling, wavg/corr, group-wise OLS (10.3)
+├── 4-group-transforms.py             # transform (broadcast & same-shape), normalization, "unwrapped" group operations                (10.4)
+└── 5-pivot-tables-crosstab.py        # pivot_table (margins, aggfunc, fill_value) and pd.crosstab                                      (10.5)
+```
 
 ## Running an exercise file
 
