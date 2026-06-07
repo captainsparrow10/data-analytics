@@ -81,13 +81,16 @@ This file contains 45 exercises covering list fundamentals and common idioms.
 18. LIST COMPREHENSION ([expr for item in iterable if cond])
     Description: Build a new list declaratively
     Example: [x**2 for x in [1, 2, 3]] = [1, 4, 9]
+
+Run:
+    poetry run python cap_03_built-in/data-structures/2-list.py
 """
 
 from itertools import combinations
 from typing import Any, cast
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: Basic List Operations
 
@@ -108,7 +111,7 @@ def exercise_one():
     print(f"Third element: {third_element}, Length: {length}, Empty: {is_empty}")
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: List Manipulation
 
@@ -130,7 +133,7 @@ def exercise_two():
     print(numbers)
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Sum and Average
 
@@ -148,7 +151,7 @@ def exercise_three():
     print(f"Sum: {total}, Average: {average}")
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Maximum and Minimum
 
@@ -164,7 +167,7 @@ def exercise_four():
     print(f"Maximum: {max(numbers)}, Minimum: {min(numbers)}")
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Product of Elements
 
@@ -183,7 +186,7 @@ def exercise_five():
     print(f"Product: {product}")
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Count Even and Odd
 
@@ -201,7 +204,7 @@ def exercise_six():
     print(f"Even: {even}, Odd: {odd}")
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: Reverse a List
 
@@ -218,7 +221,7 @@ def exercise_seven():
     print(reversed_numbers)
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: Sort Numbers
 
@@ -235,7 +238,7 @@ def exercise_eight():
     print(sorted(numbers))
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: Copy a List
 
@@ -256,7 +259,7 @@ def exercise_nine():
     print(f"Copy: {fruits_copy}")
 
 
-def exercise_ten():
+def exercise_ten() -> None:
     """
     Exercise 10: Combine Two Lists
 
@@ -273,7 +276,7 @@ def exercise_ten():
     print(a + b)
 
 
-def exercise_eleven():
+def exercise_eleven() -> None:
     """
     Exercise 11: Extract Middle Elements
 
@@ -289,7 +292,7 @@ def exercise_eleven():
     print(numbers[2:5])
 
 
-def exercise_twelve():
+def exercise_twelve() -> None:
     """
     Exercise 12: Swap Elements
 
@@ -306,7 +309,7 @@ def exercise_twelve():
     print(numbers)
 
 
-def exercise_thirteen():
+def exercise_thirteen() -> None:
     """
     Exercise 13: Access Nested Lists
 
@@ -322,7 +325,7 @@ def exercise_thirteen():
     print(data[1][2])
 
 
-def exercise_fourteen():
+def exercise_fourteen() -> None:
     """
     Exercise 14: Membership Test
 
@@ -338,7 +341,7 @@ def exercise_fourteen():
     print("Tablet" in inventory)
 
 
-def exercise_fifteen():
+def exercise_fifteen() -> None:
     """
     Exercise 15: Longest String
 
@@ -354,7 +357,7 @@ def exercise_fifteen():
     print(max(words, key=len))
 
 
-def exercise_sixteen():
+def exercise_sixteen() -> None:
     """
     Exercise 16: Square Every Item
 
@@ -370,7 +373,7 @@ def exercise_sixteen():
     print([n**2 for n in numbers])
 
 
-def exercise_seventeen():
+def exercise_seventeen() -> None:
     """
     Exercise 17: Count Occurrences
 
@@ -386,7 +389,7 @@ def exercise_seventeen():
     print(f"{numbers.count(10)} times")
 
 
-def exercise_eighteen():
+def exercise_eighteen() -> None:
     """
     Exercise 18: Remove All Occurrences
 
@@ -404,7 +407,7 @@ def exercise_eighteen():
     print(cleaned)
 
 
-def exercise_nineteen():
+def exercise_nineteen() -> None:
     """
     Exercise 19: Remove Empty Strings
 
@@ -420,7 +423,7 @@ def exercise_nineteen():
     print([name for name in names if name])
 
 
-def exercise_twenty():
+def exercise_twenty() -> None:
     """
     Exercise 20: Remove Duplicates
 
@@ -437,7 +440,7 @@ def exercise_twenty():
     print(unique)
 
 
-def exercise_twenty_one():
+def exercise_twenty_one() -> None:
     """
     Exercise 21: Filter Even Numbers
 
@@ -453,7 +456,7 @@ def exercise_twenty_one():
     print([n for n in numbers if n % 2 == 0])
 
 
-def exercise_twenty_two():
+def exercise_twenty_two() -> None:
     """
     Exercise 22: Index-wise Concatenation
 
@@ -470,7 +473,7 @@ def exercise_twenty_two():
     print([x + y for x, y in zip(a, b)])
 
 
-def exercise_twenty_three():
+def exercise_twenty_three() -> None:
     """
     Exercise 23: Simultaneous Iteration
 
@@ -488,7 +491,7 @@ def exercise_twenty_three():
         print(f"{x} -> {y}")
 
 
-def exercise_twenty_four():
+def exercise_twenty_four() -> None:
     """
     Exercise 24: Insert After Item
 
@@ -506,7 +509,7 @@ def exercise_twenty_four():
     print(numbers)
 
 
-def exercise_twenty_five():
+def exercise_twenty_five() -> None:
     """
     Exercise 25: Replace if Found
 
@@ -524,7 +527,7 @@ def exercise_twenty_five():
     print(numbers)
 
 
-def exercise_twenty_six():
+def exercise_twenty_six() -> None:
     """
     Exercise 26: Second Largest
 
@@ -541,7 +544,7 @@ def exercise_twenty_six():
     print(unique_sorted[-2])
 
 
-def exercise_twenty_seven():
+def exercise_twenty_seven() -> None:
     """
     Exercise 27: Most Frequent Element
 
@@ -558,7 +561,7 @@ def exercise_twenty_seven():
     print(most_frequent)
 
 
-def exercise_twenty_eight():
+def exercise_twenty_eight() -> None:
     """
     Exercise 28: Every Nth Element
 
@@ -575,7 +578,7 @@ def exercise_twenty_eight():
     print(letters[::n])
 
 
-def exercise_twenty_nine():
+def exercise_twenty_nine() -> None:
     """
     Exercise 29: Palindrome Check
 
@@ -591,7 +594,7 @@ def exercise_twenty_nine():
     print(numbers == numbers[::-1])
 
 
-def exercise_thirty():
+def exercise_thirty() -> None:
     """
     Exercise 30: Common Elements
 
@@ -613,7 +616,7 @@ def exercise_thirty():
     print(common)
 
 
-def exercise_thirty_one():
+def exercise_thirty_one() -> None:
     """
     Exercise 31: Filter by Length
 
@@ -630,7 +633,7 @@ def exercise_thirty_one():
     print([w for w in words if len(w) >= k])
 
 
-def exercise_thirty_two():
+def exercise_thirty_two() -> None:
     """
     Exercise 32: Check if Sorted
 
@@ -646,7 +649,7 @@ def exercise_thirty_two():
     print(numbers == sorted(numbers))
 
 
-def exercise_thirty_three():
+def exercise_thirty_three() -> None:
     """
     Exercise 33: Convert to Dictionary
 
@@ -663,7 +666,7 @@ def exercise_thirty_three():
     print(dict(zip(keys, values)))
 
 
-def exercise_thirty_four():
+def exercise_thirty_four() -> None:
     """
     Exercise 34: List Difference
 
@@ -680,7 +683,7 @@ def exercise_thirty_four():
     print([x for x in a if x not in b])
 
 
-def exercise_thirty_five():
+def exercise_thirty_five() -> None:
     """
     Exercise 35: Remove Negatives In-place
 
@@ -698,7 +701,7 @@ def exercise_thirty_five():
     print(numbers)
 
 
-def exercise_thirty_six():
+def exercise_thirty_six() -> None:
     """
     Exercise 36: Extend Nested Lists
 
@@ -716,7 +719,7 @@ def exercise_thirty_six():
     print(data)
 
 
-def exercise_thirty_seven():
+def exercise_thirty_seven() -> None:
     """
     Exercise 37: Specific Order Concatenation
 
@@ -733,7 +736,7 @@ def exercise_thirty_seven():
     print([x + y for x in a for y in b])
 
 
-def exercise_thirty_eight():
+def exercise_thirty_eight() -> None:
     """
     Exercise 38: Flatten 2D List
 
@@ -750,7 +753,7 @@ def exercise_thirty_eight():
     print(flat)
 
 
-def exercise_thirty_nine():
+def exercise_thirty_nine() -> None:
     """
     Exercise 39: Deep Flatten (Recursion)
 
@@ -777,7 +780,7 @@ def exercise_thirty_nine():
     print(flatten(data))
 
 
-def exercise_forty():
+def exercise_forty() -> None:
     """
     Exercise 40: Cumulative Sum
 
@@ -798,7 +801,7 @@ def exercise_forty():
     print(result)
 
 
-def exercise_forty_one():
+def exercise_forty_one() -> None:
     """
     Exercise 41: Rotate List
 
@@ -816,7 +819,7 @@ def exercise_forty_one():
     print(rotated)
 
 
-def exercise_forty_two():
+def exercise_forty_two() -> None:
     """
     Exercise 42: Split into Chunks
 
@@ -834,7 +837,7 @@ def exercise_forty_two():
     print(chunks)
 
 
-def exercise_forty_three():
+def exercise_forty_three() -> None:
     """
     Exercise 43: Move Zeros to End
 
@@ -852,7 +855,7 @@ def exercise_forty_three():
     print(non_zeros + zeros)
 
 
-def exercise_forty_four():
+def exercise_forty_four() -> None:
     """
     Exercise 44: Generate Primes
 
@@ -878,7 +881,7 @@ def exercise_forty_four():
     print(primes)
 
 
-def exercise_forty_five():
+def exercise_forty_five() -> None:
     """
     Exercise 45: Power Set
 
@@ -899,7 +902,7 @@ def exercise_forty_five():
     print(power_set)
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: Basic List Operations ===")
     exercise_one()
 
@@ -1034,3 +1037,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 45: Power Set ===")
     exercise_forty_five()
+
+
+main()

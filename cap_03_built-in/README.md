@@ -1,4 +1,4 @@
-# Chapter 1 — Python Built-ins
+# Chapter 3 — Python Built-ins
 
 The core Python language: built-in data structures, control flow, functions, file and
 JSON handling, input/output, and two essential standard-library modules (regex and
@@ -50,7 +50,7 @@ Exercises adapted from [PYnative](https://pynative.com/). **373 exercises** acro
 ## Running
 
 ```bash
-python3 cap_03_built-in/data-structures/3-set.py   # runs every exercise in the file
+poetry run python cap_03_built-in/data-structures/3-set.py   # runs every exercise in the file
 ```
 
 Each file is kept at 0 pyright-strict errors. See the [project README](../README.md)

@@ -43,10 +43,13 @@ each function matches its docstring and runner header.
 8. ENUMERATE
    Description: Loop with both index and value
    Example: for i, v in enumerate(seq): ...
+
+Run:
+    poetry run python cap_03_built-in/control-flow/1-if-else-for-loop.py
 """
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: First 10 Natural Numbers (while)
 
@@ -65,7 +68,7 @@ def exercise_one():
     print()
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: Numbers -10 to -1 (for)
 
@@ -82,7 +85,7 @@ def exercise_two():
     print()
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Print Numbers Then "Done!"
 
@@ -100,7 +103,7 @@ def exercise_three():
     print("Done!")
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Sum from 1 to N
 
@@ -118,7 +121,7 @@ def exercise_four():
     print(f"Sum is: {total}")
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Multiplication Table
 
@@ -135,7 +138,7 @@ def exercise_five():
     print()
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Cubes with Formatted Output
 
@@ -151,7 +154,7 @@ def exercise_six():
         print(f"Current Number is : {n} and the cube is {n ** 3}")
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: Conditional Iteration with break/continue
 
@@ -174,7 +177,7 @@ def exercise_seven():
     print()
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: Count Occurrences in a List
 
@@ -194,7 +197,7 @@ def exercise_eight():
     print(f"{target} appears {count} times")
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: Elements at Odd Index Positions
 
@@ -211,7 +214,7 @@ def exercise_nine():
     print(result)
 
 
-def exercise_ten():
+def exercise_ten() -> None:
     """
     Exercise 10: Iterate a List in Reverse
 
@@ -229,7 +232,7 @@ def exercise_ten():
     print()
 
 
-def exercise_eleven():
+def exercise_eleven() -> None:
     """
     Exercise 11: Reverse a String with a Loop
 
@@ -248,7 +251,7 @@ def exercise_eleven():
     print(f"Original: {text}, Reversed: {reversed_text}")
 
 
-def exercise_twelve():
+def exercise_twelve() -> None:
     """
     Exercise 12: Count Vowels and Consonants
 
@@ -271,7 +274,7 @@ def exercise_twelve():
     print(f"Vowels: {vowels}, Consonants: {consonants}")
 
 
-def exercise_thirteen():
+def exercise_thirteen() -> None:
     """
     Exercise 13: Count Digits in an Integer (while)
 
@@ -291,7 +294,7 @@ def exercise_thirteen():
     print(f"Total digits are: {count}")
 
 
-def exercise_fourteen():
+def exercise_fourteen() -> None:
     """
     Exercise 14: Reverse an Integer Mathematically
 
@@ -311,7 +314,7 @@ def exercise_fourteen():
     print(reversed_number)
 
 
-def exercise_fifteen():
+def exercise_fifteen() -> None:
     """
     Exercise 15: Largest and Smallest Digit
 
@@ -327,7 +330,7 @@ def exercise_fifteen():
     print(f"Largest digit: {max(digits)}, Smallest digit: {min(digits)}")
 
 
-def exercise_sixteen():
+def exercise_sixteen() -> None:
     """
     Exercise 16: Number Palindrome Check
 
@@ -343,7 +346,7 @@ def exercise_sixteen():
     print("Yes" if text == text[::-1] else "No")
 
 
-def exercise_seventeen():
+def exercise_seventeen() -> None:
     """
     Exercise 17: Factorial with a Loop
 
@@ -362,7 +365,7 @@ def exercise_seventeen():
     print(factorial)
 
 
-def exercise_eighteen():
+def exercise_eighteen() -> None:
     """
     Exercise 18: Collatz Conjecture Sequence
 
@@ -382,7 +385,7 @@ def exercise_eighteen():
     print(*sequence)
 
 
-def exercise_nineteen():
+def exercise_nineteen() -> None:
     """
     Exercise 19: Armstrong Number Check
 
@@ -400,7 +403,7 @@ def exercise_nineteen():
     print("Yes" if total == number else "No")
 
 
-def exercise_twenty():
+def exercise_twenty() -> None:
     """
     Exercise 20: Right-Angled Number Triangle
 
@@ -419,7 +422,7 @@ def exercise_twenty():
         print()
 
 
-def exercise_twenty_one():
+def exercise_twenty_one() -> None:
     """
     Exercise 21: Reverse Number Pattern
 
@@ -438,7 +441,7 @@ def exercise_twenty_one():
         print()
 
 
-def exercise_twenty_two():
+def exercise_twenty_two() -> None:
     """
     Exercise 22: Alternate Numbers 1 to 20
 
@@ -454,7 +457,7 @@ def exercise_twenty_two():
     print()
 
 
-def exercise_twenty_three():
+def exercise_twenty_three() -> None:
     """
     Exercise 23: Alphabet Pyramid
 
@@ -472,7 +475,7 @@ def exercise_twenty_three():
         print(*([letter] * (i + 1)))
 
 
-def exercise_twenty_four():
+def exercise_twenty_four() -> None:
     """
     Exercise 24: Hollow Square
 
@@ -494,7 +497,7 @@ def exercise_twenty_four():
         print()
 
 
-def exercise_twenty_five():
+def exercise_twenty_five() -> None:
     """
     Exercise 25: Diamond-ish Star Pyramid
 
@@ -513,7 +516,7 @@ def exercise_twenty_five():
         print("*" * count)
 
 
-def exercise_twenty_six():
+def exercise_twenty_six() -> None:
     """
     Exercise 26: Full Multiplication Grid
 
@@ -531,7 +534,7 @@ def exercise_twenty_six():
         print()
 
 
-def exercise_twenty_seven():
+def exercise_twenty_seven() -> None:
     """
     Exercise 27: Cumulative Sum List
 
@@ -552,7 +555,7 @@ def exercise_twenty_seven():
     print(result)
 
 
-def exercise_twenty_eight():
+def exercise_twenty_eight() -> None:
     """
     Exercise 28: Filter Dictionary by Threshold
 
@@ -570,7 +573,7 @@ def exercise_twenty_eight():
     print(result)
 
 
-def exercise_twenty_nine():
+def exercise_twenty_nine() -> None:
     """
     Exercise 29: Common Elements with a Loop
 
@@ -588,7 +591,7 @@ def exercise_twenty_nine():
     print(common)
 
 
-def exercise_thirty():
+def exercise_thirty() -> None:
     """
     Exercise 30: Remove Duplicates Preserving Order
 
@@ -610,7 +613,7 @@ def exercise_thirty():
     print(result)
 
 
-def exercise_thirty_one():
+def exercise_thirty_one() -> None:
     """
     Exercise 31: Evens to Front, Odds to Back
 
@@ -628,7 +631,7 @@ def exercise_thirty_one():
     print(evens + odds)
 
 
-def exercise_thirty_two():
+def exercise_thirty_two() -> None:
     """
     Exercise 32: Rotate List Left by K
 
@@ -644,7 +647,7 @@ def exercise_thirty_two():
     print(numbers[k:] + numbers[:k])
 
 
-def exercise_thirty_three():
+def exercise_thirty_three() -> None:
     """
     Exercise 33: Word Frequency
 
@@ -663,7 +666,7 @@ def exercise_thirty_three():
     print(counts)
 
 
-def exercise_thirty_four():
+def exercise_thirty_four() -> None:
     """
     Exercise 34: Fibonacci Sequence
 
@@ -683,7 +686,7 @@ def exercise_thirty_four():
     print()
 
 
-def exercise_thirty_five():
+def exercise_thirty_five() -> None:
     """
     Exercise 35: Perfect Number Check
 
@@ -703,7 +706,7 @@ def exercise_thirty_five():
         print(f"{number} is not a Perfect Number")
 
 
-def exercise_thirty_six():
+def exercise_thirty_six() -> None:
     """
     Exercise 36: Binary String to Decimal
 
@@ -722,7 +725,7 @@ def exercise_thirty_six():
     print(f"Decimal value: {decimal}")
 
 
-def exercise_thirty_seven():
+def exercise_thirty_seven() -> None:
     """
     Exercise 37: Primes in a Range
 
@@ -746,7 +749,7 @@ def exercise_thirty_seven():
     print()
 
 
-def exercise_thirty_eight():
+def exercise_thirty_eight() -> None:
     """
     Exercise 38: Sum of Series 2 + 22 + 222 + ...
 
@@ -767,7 +770,7 @@ def exercise_thirty_eight():
     print(total)
 
 
-def exercise_thirty_nine():
+def exercise_thirty_nine() -> None:
     """
     Exercise 39: Flatten a Nested List
 
@@ -784,7 +787,7 @@ def exercise_thirty_nine():
     print(flat)
 
 
-def exercise_forty():
+def exercise_forty() -> None:
     """
     Exercise 40: Find Position in a 2D Matrix
 
@@ -804,7 +807,7 @@ def exercise_forty():
                 print(f"Target {target} found at Row: {row_index}, Column: {col_index}")
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: First 10 Natural Numbers (while) ===")
     exercise_one()
 
@@ -924,3 +927,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 40: Find Position in a 2D Matrix ===")
     exercise_forty()
+
+
+main()

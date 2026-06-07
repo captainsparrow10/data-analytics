@@ -48,10 +48,13 @@ and common idioms.
 10. ITERATION
     Description: A string is iterable character by character
     Example: [c for c in "ab"] = ["a", "b"]
+
+Run:
+    poetry run python cap_03_built-in/data-structures/5-string.py
 """
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: First, Middle, Last Character
 
@@ -70,7 +73,7 @@ def exercise_one():
     print(result)
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: Middle Three Characters
 
@@ -87,7 +90,7 @@ def exercise_two():
     print(str1[start:start + 3])
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Append in Middle
 
@@ -105,7 +108,7 @@ def exercise_three():
     print(s1[:mid] + s2 + s1[mid:])
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Extract from Two Strings
 
@@ -125,7 +128,7 @@ def exercise_four():
     print(result)
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Reverse String
 
@@ -141,7 +144,7 @@ def exercise_five():
     print(str1[::-1])
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Last Substring Position
 
@@ -157,7 +160,7 @@ def exercise_six():
     print(f"Last occurrence of Emma starts at index {str1.rfind('Emma')}")
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: Split on Hyphens
 
@@ -174,7 +177,7 @@ def exercise_seven():
         print(word)
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: Case-Insensitive Count
 
@@ -190,7 +193,7 @@ def exercise_eight():
     print(f"The USA count is: {str1.lower().count('usa')}")
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: String Balance Check
 
@@ -209,7 +212,7 @@ def exercise_nine():
     print(is_balanced("ynf", "PyNative"))
 
 
-def exercise_ten():
+def exercise_ten() -> None:
     """
     Exercise 10: Vowel Counter
 
@@ -226,7 +229,7 @@ def exercise_ten():
     print(f"Vowel Count: {count}")
 
 
-def exercise_eleven():
+def exercise_eleven() -> None:
     """
     Exercise 11: Prefix/Suffix Validation
 
@@ -243,7 +246,7 @@ def exercise_eleven():
     print(f"Is valid URL: {valid}")
 
 
-def exercise_twelve():
+def exercise_twelve() -> None:
     """
     Exercise 12: Case Swap
 
@@ -259,7 +262,7 @@ def exercise_twelve():
     print(str1.swapcase())
 
 
-def exercise_thirteen():
+def exercise_thirteen() -> None:
     """
     Exercise 13: Remove Whitespace
 
@@ -275,7 +278,7 @@ def exercise_thirteen():
     print(str1.replace(" ", ""))
 
 
-def exercise_fourteen():
+def exercise_fourteen() -> None:
     """
     Exercise 14: Remove Character at Index
 
@@ -292,7 +295,7 @@ def exercise_fourteen():
     print(str1[:i] + str1[i + 1:])
 
 
-def exercise_fifteen():
+def exercise_fifteen() -> None:
     """
     Exercise 15: String Partitioning
 
@@ -308,7 +311,7 @@ def exercise_fifteen():
     print(str1.partition("@"))
 
 
-def exercise_sixteen():
+def exercise_sixteen() -> None:
     """
     Exercise 16: Extract File Extension
 
@@ -324,7 +327,7 @@ def exercise_sixteen():
     print(file_name.rsplit(".", 1)[-1])
 
 
-def exercise_seventeen():
+def exercise_seventeen() -> None:
     """
     Exercise 17: Lowercase First
 
@@ -342,7 +345,7 @@ def exercise_seventeen():
     print("".join(lowers + uppers))
 
 
-def exercise_eighteen():
+def exercise_eighteen() -> None:
     """
     Exercise 18: Count Character Categories
 
@@ -366,7 +369,7 @@ def exercise_eighteen():
     print(f"Chars = {chars} Digits = {digits} Symbol = {symbols}")
 
 
-def exercise_nineteen():
+def exercise_nineteen() -> None:
     """
     Exercise 19: Alternating Characters
 
@@ -385,7 +388,7 @@ def exercise_nineteen():
     print(result)
 
 
-def exercise_twenty():
+def exercise_twenty() -> None:
     """
     Exercise 20: Sum and Average of Digits
 
@@ -404,7 +407,7 @@ def exercise_twenty():
     print(f"Sum is: {total} Average is {average:.2f}")
 
 
-def exercise_twenty_one():
+def exercise_twenty_one() -> None:
     """
     Exercise 21: Character Frequency Count
 
@@ -422,7 +425,7 @@ def exercise_twenty_one():
     print(freq)
 
 
-def exercise_twenty_two():
+def exercise_twenty_two() -> None:
     """
     Exercise 22: Remove Empty Strings
 
@@ -440,7 +443,7 @@ def exercise_twenty_two():
     print(cleaned)
 
 
-def exercise_twenty_three():
+def exercise_twenty_three() -> None:
     """
     Exercise 23: Remove Punctuation
 
@@ -457,7 +460,7 @@ def exercise_twenty_three():
     print(" ".join(kept.split()))
 
 
-def exercise_twenty_four():
+def exercise_twenty_four() -> None:
     """
     Exercise 24: Extract Only Digits
 
@@ -473,7 +476,7 @@ def exercise_twenty_four():
     print("".join(c for c in str1 if c.isdigit()))
 
 
-def exercise_twenty_five():
+def exercise_twenty_five() -> None:
     """
     Exercise 25: Find Alphanumeric Words
 
@@ -493,7 +496,7 @@ def exercise_twenty_five():
             print(word)
 
 
-def exercise_twenty_six():
+def exercise_twenty_six() -> None:
     """
     Exercise 26: Replace Symbols with Hash
 
@@ -510,7 +513,7 @@ def exercise_twenty_six():
     print(result)
 
 
-def exercise_twenty_seven():
+def exercise_twenty_seven() -> None:
     """
     Exercise 27: Palindrome Check
 
@@ -525,7 +528,7 @@ def exercise_twenty_seven():
     print(f"Is Palindrome: {str1 == str1[::-1]}")
 
 
-def exercise_twenty_eight():
+def exercise_twenty_eight() -> None:
     """
     Exercise 28: Anagram Detection
 
@@ -542,7 +545,7 @@ def exercise_twenty_eight():
     print(f"Are Anagrams: {sorted(s1) == sorted(s2)}")
 
 
-def exercise_twenty_nine():
+def exercise_twenty_nine() -> None:
     """
     Exercise 29: Unique Character Check
 
@@ -560,7 +563,7 @@ def exercise_twenty_nine():
     print(f"'{str2}' unique: {len(set(str2)) == len(str2)}")
 
 
-def exercise_thirty():
+def exercise_thirty() -> None:
     """
     Exercise 30: Title Case Implementation
 
@@ -576,7 +579,7 @@ def exercise_thirty():
     print(" ".join(word.capitalize() for word in str1.split()))
 
 
-def exercise_thirty_one():
+def exercise_thirty_one() -> None:
     """
     Exercise 31: Remove Duplicate Characters
 
@@ -592,7 +595,7 @@ def exercise_thirty_one():
     print("".join(dict.fromkeys(str1)))
 
 
-def exercise_thirty_two():
+def exercise_thirty_two() -> None:
     """
     Exercise 32: Word Reversal
 
@@ -608,7 +611,7 @@ def exercise_thirty_two():
     print(" ".join(str1.split()[::-1]))
 
 
-def exercise_thirty_three():
+def exercise_thirty_three() -> None:
     """
     Exercise 33: Character Interleaving
 
@@ -625,7 +628,7 @@ def exercise_thirty_three():
     print("".join(a + b for a, b in zip(s1, s2)))
 
 
-def exercise_thirty_four():
+def exercise_thirty_four() -> None:
     """
     Exercise 34: Longest Word
 
@@ -641,7 +644,7 @@ def exercise_thirty_four():
     print(f"Longest word: {max(str1.split(), key=len)}")
 
 
-def exercise_thirty_five():
+def exercise_thirty_five() -> None:
     """
     Exercise 35: Acronym Generator
 
@@ -657,7 +660,7 @@ def exercise_thirty_five():
     print("".join(word[0].upper() for word in str1.split()))
 
 
-def exercise_thirty_six():
+def exercise_thirty_six() -> None:
     """
     Exercise 36: Word Frequency
 
@@ -675,7 +678,7 @@ def exercise_thirty_six():
     print(counts)
 
 
-def exercise_thirty_seven():
+def exercise_thirty_seven() -> None:
     """
     Exercise 37: First Non-Repeating Character
 
@@ -698,7 +701,7 @@ def exercise_thirty_seven():
             break
 
 
-def exercise_thirty_eight():
+def exercise_thirty_eight() -> None:
     """
     Exercise 38: String Rotation Check
 
@@ -716,7 +719,7 @@ def exercise_thirty_eight():
     print(f"Is Rotation: {is_rotation}")
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: First, Middle, Last Character ===")
     exercise_one()
 
@@ -830,3 +833,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 38: String Rotation Check ===")
     exercise_thirty_eight()
+
+
+main()

@@ -83,12 +83,15 @@ fundamentals and common idioms.
 19. FROZENSET (frozenset(iterable))
     Description: Immutable, hashable set; usable as a dict key or set element
     Example: frozenset([1, 2, 2]) = frozenset({1, 2})
+
+Run:
+    poetry run python cap_03_built-in/data-structures/3-set.py
 """
 
 from typing import Any, cast
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: Basic Set Operations
 
@@ -115,7 +118,7 @@ def exercise_one():
     print(f"After discard: {fruits}")
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: Clear All Elements
 
@@ -133,7 +136,7 @@ def exercise_two():
     print(colors)
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Find the Length of a Set
 
@@ -153,7 +156,7 @@ def exercise_three():
     print(f"Length of set: {count}")
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Check if a Set is Empty
 
@@ -173,7 +176,7 @@ def exercise_four():
         print("The set has elements.")
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Union of Sets
 
@@ -190,7 +193,7 @@ def exercise_five():
     print(f"Union: {set_a | set_b}")
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Intersection of Sets
 
@@ -207,7 +210,7 @@ def exercise_six():
     print(f"Intersection: {set_a & set_b}")
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: Difference of Sets
 
@@ -224,7 +227,7 @@ def exercise_seven():
     print(f"Difference (A - B): {set_a - set_b}")
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: Symmetric Difference
 
@@ -241,7 +244,7 @@ def exercise_eight():
     print(f"Symmetric Difference: {set_a ^ set_b}")
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: Find Max and Min
 
@@ -257,7 +260,7 @@ def exercise_nine():
     print(f"Max: {max(numbers)}, Min: {min(numbers)}")
 
 
-def exercise_ten():
+def exercise_ten() -> None:
     """
     Exercise 10: Sum of Set Elements
 
@@ -276,7 +279,7 @@ def exercise_ten():
     print(f"Sum: {total}")
 
 
-def exercise_eleven():
+def exercise_eleven() -> None:
     """
     Exercise 11: Add a List of Elements
 
@@ -294,7 +297,7 @@ def exercise_eleven():
     print(f"Updated set: {fruits}")
 
 
-def exercise_twelve():
+def exercise_twelve() -> None:
     """
     Exercise 12: Update with Multiple Iterables
 
@@ -314,7 +317,7 @@ def exercise_twelve():
     print(f"Updated set: {base}")
 
 
-def exercise_thirteen():
+def exercise_thirteen() -> None:
     """
     Exercise 13: Check Subset and Superset
 
@@ -332,7 +335,7 @@ def exercise_thirteen():
     print(f"Is set_b a superset of set_a? {set_b.issuperset(set_a)}")
 
 
-def exercise_fourteen():
+def exercise_fourteen() -> None:
     """
     Exercise 14: Intersection Check with isdisjoint()
 
@@ -350,7 +353,7 @@ def exercise_fourteen():
     print(f"Are the sets disjoint? {set_a.isdisjoint(set_b)}")
 
 
-def exercise_fifteen():
+def exercise_fifteen() -> None:
     """
     Exercise 15: Set Difference Update
 
@@ -369,7 +372,7 @@ def exercise_fifteen():
     print(f"a = {a}")
 
 
-def exercise_sixteen():
+def exercise_sixteen() -> None:
     """
     Exercise 16: Set Intersection Update
 
@@ -387,7 +390,7 @@ def exercise_sixteen():
     print(f"a = {a}")
 
 
-def exercise_seventeen():
+def exercise_seventeen() -> None:
     """
     Exercise 17: Set Symmetric Difference Update
 
@@ -405,7 +408,7 @@ def exercise_seventeen():
     print(f"a = {a}")
 
 
-def exercise_eighteen():
+def exercise_eighteen() -> None:
     """
     Exercise 18: Remove Items Simultaneously
 
@@ -424,7 +427,7 @@ def exercise_eighteen():
     print(f"items = {items}")
 
 
-def exercise_nineteen():
+def exercise_nineteen() -> None:
     """
     Exercise 19: The Pop Operation
 
@@ -448,7 +451,7 @@ def exercise_nineteen():
         print(f"Error: {e}")
 
 
-def exercise_twenty():
+def exercise_twenty() -> None:
     """
     Exercise 20: Filter a Set
 
@@ -465,7 +468,7 @@ def exercise_twenty():
     print(f"divisible_by_3 = {divisible_by_3}")
 
 
-def exercise_twenty_one():
+def exercise_twenty_one() -> None:
     """
     Exercise 21: Find Common Elements in Lists
 
@@ -483,7 +486,7 @@ def exercise_twenty_one():
     print(f"common = {common}")
 
 
-def exercise_twenty_two():
+def exercise_twenty_two() -> None:
     """
     Exercise 22: Count Unique Words
 
@@ -500,7 +503,7 @@ def exercise_twenty_two():
     print(f"Unique word count: {len(unique_words)}")
 
 
-def exercise_twenty_three():
+def exercise_twenty_three() -> None:
     """
     Exercise 23: Convert Set to Joined String
 
@@ -517,7 +520,7 @@ def exercise_twenty_three():
     print(joined)
 
 
-def exercise_twenty_four():
+def exercise_twenty_four() -> None:
     """
     Exercise 24: Proper Subset and Superset
 
@@ -536,7 +539,7 @@ def exercise_twenty_four():
     print(f"b is a proper superset of a: {b > a}")
 
 
-def exercise_twenty_five():
+def exercise_twenty_five() -> None:
     """
     Exercise 25: Frozen Set
 
@@ -558,7 +561,7 @@ def exercise_twenty_five():
         print(f"Error: {e}")
 
 
-def exercise_twenty_six():
+def exercise_twenty_six() -> None:
     """
     Exercise 26: Set Comprehension
 
@@ -574,7 +577,7 @@ def exercise_twenty_six():
     print(squares_of_evens)
 
 
-def exercise_twenty_seven():
+def exercise_twenty_seven() -> None:
     """
     Exercise 27: Remove Duplicates (Preserving Order)
 
@@ -592,7 +595,7 @@ def exercise_twenty_seven():
     print(unique_ordered)
 
 
-def exercise_twenty_eight():
+def exercise_twenty_eight() -> None:
     """
     Exercise 28: Multi-Set Difference
 
@@ -610,7 +613,7 @@ def exercise_twenty_eight():
     print(f"Result: {a - b - c}")
 
 
-def exercise_twenty_nine():
+def exercise_twenty_nine() -> None:
     """
     Exercise 29: Set of Tuples
 
@@ -632,7 +635,7 @@ def exercise_twenty_nine():
         print(f"Error: {e}")
 
 
-def exercise_thirty():
+def exercise_thirty() -> None:
     """
     Exercise 30: Shallow Copy vs. Assignment
 
@@ -655,7 +658,7 @@ def exercise_thirty():
     print(f"independent copy is unchanged: {independent}")
 
 
-def exercise_thirty_one():
+def exercise_thirty_one() -> None:
     """
     Exercise 31: Membership Testing Performance
 
@@ -687,7 +690,7 @@ def exercise_thirty_one():
     print(f"Set lookup time:  {set_time:.6f} seconds")
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: Basic Set Operations ===")
     exercise_one()
 
@@ -780,3 +783,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 31: Membership Testing Performance ===")
     exercise_thirty_one()
+
+
+main()

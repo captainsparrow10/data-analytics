@@ -41,13 +41,16 @@ real call. File-based exercises use tempfile so they are self-contained.
 7. PASSWORD INPUT (getpass.getpass)
    Description: Read input without echoing it to the screen
    Example: pw = getpass.getpass()
+
+Run:
+    poetry run python cap_03_built-in/io/1-input-output.py
 """
 
 import tempfile
 from pathlib import Path
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: Accept Numbers from User
 
@@ -63,7 +66,7 @@ def exercise_one():
     print(f"The multiplication is: {first * second}")
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: Display Variables with Separator
 
@@ -78,7 +81,7 @@ def exercise_two():
     print("Name", "Is", "James", sep="***")
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Convert Decimal to Octal
 
@@ -93,7 +96,7 @@ def exercise_three():
     print(f"The octal number of decimal number {number} is {number:o}")
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Binary Representation
 
@@ -108,7 +111,7 @@ def exercise_four():
     print(f"The binary representation of {number} is {number:b}")
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Accept Three Strings from One Input
 
@@ -125,7 +128,7 @@ def exercise_five():
     print(f"Name1: {name1} / Name2: {name2} / Name3: {name3}")
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Hexadecimal Representation
 
@@ -141,7 +144,7 @@ def exercise_six():
     print(f"The hexadecimal value is {number:x}")
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: Display Float with 2 Decimal Places
 
@@ -157,7 +160,7 @@ def exercise_seven():
     print(f"{number:.2f}")
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: Percentage Display
 
@@ -175,7 +178,7 @@ def exercise_eight():
     print(f"The result is: {percentage:.2f}%")
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: Right-Aligned Output
 
@@ -192,7 +195,7 @@ def exercise_nine():
     print(f"{word:>20} {number}")
 
 
-def exercise_ten():
+def exercise_ten() -> None:
     """
     Exercise 10: Center-Aligned Text
 
@@ -208,7 +211,7 @@ def exercise_ten():
     print(f"{text:-^40}")
 
 
-def exercise_eleven():
+def exercise_eleven() -> None:
     """
     Exercise 11: Padding with Zeros
 
@@ -224,7 +227,7 @@ def exercise_eleven():
     print(f"{number:05d}")
 
 
-def exercise_twelve():
+def exercise_twelve() -> None:
     """
     Exercise 12: Format Variables Using .format()
 
@@ -246,7 +249,7 @@ def exercise_twelve():
     )
 
 
-def exercise_thirteen():
+def exercise_thirteen() -> None:
     """
     Exercise 13: Currency Formatting with Commas
 
@@ -263,7 +266,7 @@ def exercise_thirteen():
     print(f"Total Balance: ${amount:,.2f}")
 
 
-def exercise_fourteen():
+def exercise_fourteen() -> None:
     """
     Exercise 14: Accept List of 5 Float Numbers
 
@@ -280,7 +283,7 @@ def exercise_fourteen():
     print(numbers)
 
 
-def exercise_fifteen():
+def exercise_fifteen() -> None:
     """
     Exercise 15: Tabular Output from Lists
 
@@ -299,7 +302,7 @@ def exercise_fifteen():
         print(f"{name:<10}{score:>6}")
 
 
-def exercise_sixteen():
+def exercise_sixteen() -> None:
     """
     Exercise 16: Interactive Menu
 
@@ -321,7 +324,7 @@ def exercise_sixteen():
         print(f"The double is: {number * 2}")
 
 
-def exercise_seventeen():
+def exercise_seventeen() -> None:
     """
     Exercise 17: Masked Password Input
 
@@ -341,7 +344,7 @@ def exercise_seventeen():
         print("Login failed.")
 
 
-def exercise_eighteen():
+def exercise_eighteen() -> None:
     """
     Exercise 18: Read File and Store in List
 
@@ -360,7 +363,7 @@ def exercise_eighteen():
         print(lines)
 
 
-def exercise_nineteen():
+def exercise_nineteen() -> None:
     """
     Exercise 19: Write List to File
 
@@ -379,7 +382,7 @@ def exercise_nineteen():
         print(fruits_file.read_text(), end="")
 
 
-def exercise_twenty():
+def exercise_twenty() -> None:
     """
     Exercise 20: Count Total Lines in File
 
@@ -396,7 +399,7 @@ def exercise_twenty():
         print(len(sample.read_text().splitlines()))
 
 
-def exercise_twenty_one():
+def exercise_twenty_one() -> None:
     """
     Exercise 21: Read Specific Line from File
 
@@ -414,7 +417,7 @@ def exercise_twenty_one():
         print(test_file.read_text().splitlines()[3])
 
 
-def exercise_twenty_two():
+def exercise_twenty_two() -> None:
     """
     Exercise 22: Check if File is Empty
 
@@ -435,7 +438,7 @@ def exercise_twenty_two():
             print("Status: File has content.")
 
 
-def exercise_twenty_three():
+def exercise_twenty_three() -> None:
     """
     Exercise 23: Delete a Specific File
 
@@ -455,7 +458,7 @@ def exercise_twenty_three():
             print("File 'old_data.csv' has been deleted.")
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: Accept Numbers from User ===")
     exercise_one()
 
@@ -524,3 +527,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 23: Delete a Specific File ===")
     exercise_twenty_three()
+
+
+main()

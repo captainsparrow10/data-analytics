@@ -80,12 +80,15 @@ cannot be changed. This file contains 22 exercises covering tuple fundamentals.
 17. INDEX (tuple.index())
     Description: Find the first index of an element
     Example: (1, 2, 3, 2).index(2) = 1
+
+Run:
+    poetry run python cap_03_built-in/data-structures/1-tupple.py
 """
 
 from typing import Any, NamedTuple, cast
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: Basic Tuple Operations
 
@@ -107,7 +110,7 @@ def exercise_one():
     )
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: The Trailing Comma
 
@@ -129,7 +132,7 @@ def exercise_two():
     print(type(single_item_tuple))
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Tuple Repetition
 
@@ -146,7 +149,7 @@ def exercise_three():
     print(repeated_colors)
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Tuple Concatenation
 
@@ -166,7 +169,7 @@ def exercise_four():
     print(combined_tuple)
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Tuple Slicing
 
@@ -183,7 +186,7 @@ def exercise_five():
     print(sliced_tuple)
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Tuple Reversal
 
@@ -203,7 +206,7 @@ def exercise_six():
     print(reversed_portion)
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: Type Casting
 
@@ -222,7 +225,7 @@ def exercise_seven():
     print(type(my_tuple))
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: Tuple to String
 
@@ -240,7 +243,7 @@ def exercise_eight():
     print(joined_string)
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: Tuple Membership Testing
 
@@ -258,7 +261,7 @@ def exercise_nine():
     print("grape" in fruits)  # type: ignore
 
 
-def exercise_ten():
+def exercise_ten() -> None:
     """
     Exercise 10: Counting Elements
 
@@ -278,7 +281,7 @@ def exercise_ten():
     print(f"yes appears {yes_count} times and no appears {no_count} times")
 
 
-def exercise_eleven():
+def exercise_eleven() -> None:
     """
     Exercise 11: Tuple Unpacking
 
@@ -296,7 +299,7 @@ def exercise_eleven():
     print(f"Name: {name}, Age: {age}, Job: {job}, and City: {city}")
 
 
-def exercise_twelve():
+def exercise_twelve() -> None:
     """
     Exercise 12: The Swap Trick
 
@@ -316,7 +319,7 @@ def exercise_twelve():
     print(f"After swap: a = {a}, b = {b}")
 
 
-def exercise_thirteen():
+def exercise_thirteen() -> None:
     """
     Exercise 13: Nested Tuple Access
 
@@ -335,7 +338,7 @@ def exercise_thirteen():
     print(element)
 
 
-def exercise_fourteen():
+def exercise_fourteen() -> None:
     """
     Exercise 14: Tuple Statistics
 
@@ -356,7 +359,7 @@ def exercise_fourteen():
     print(f"Sum: {total}, Max: {highest}, and Min: {lowest}")
 
 
-def exercise_fifteen():
+def exercise_fifteen() -> None:
     """
     Exercise 15: Sort Tuple of Tuples
     Problem Statement: Write a Python program to sort a tuple of tuples based on the second item in each nested tuple.
@@ -383,7 +386,7 @@ def exercise_fifteen():
     )  # output: Sorted with filter: (('Diana', 61),)
 
 
-def exercise_sixteen():
+def exercise_sixteen() -> None:
     """
     Exercise 16: Tuple Filtering
     Problem Statement: Write a Python program to filter a tuple and keep only the elements that satisfy a given condition, using both filter() and a list comprehension approach.
@@ -406,7 +409,7 @@ def exercise_sixteen():
     print(f"Filtered using comprehension: {filtered_numbers_comprehension}")
 
 
-def exercise_seventeen():
+def exercise_seventeen() -> None:
     """
     Exercise 17: Tuple Mapping
     Problem Statement: Write a Python program to apply a square function to every item in a tuple using map(), and also demonstrate the equivalent generator expression approach.
@@ -429,7 +432,7 @@ def exercise_seventeen():
     print(f"Squared using comprehension: {squared_numbers_comprehension}")
 
 
-def exercise_eighteen():
+def exercise_eighteen() -> None:
     """
     Exercise 18: Tuple Dictionary Mapping
     Problem Statement: Write a Python program to zip two tuples together – one holding keys and the other holding values – to create a dictionary.
@@ -446,7 +449,7 @@ def exercise_eighteen():
     print(mapped_dict)
 
 
-def exercise_nineteen():
+def exercise_nineteen() -> None:
     """
     Exercise 19: Tuple Intersection
     Problem Statement: Write a Python program to find all elements that are common to two different tuples.
@@ -465,7 +468,7 @@ def exercise_nineteen():
     print(f"Intersection: {intersection}")
 
 
-def exercise_twenty():
+def exercise_twenty() -> None:
     """
     Exercise 20: The “Modification” Hack
     Problem Statement: Write a Python program to “modify” a tuple by converting it to a list, changing a specific item, and converting it back to a tuple.
@@ -488,7 +491,7 @@ def exercise_twenty():
     print(f"Modified: {modified_colours}")
 
 
-def exercise_twenty_one():
+def exercise_twenty_one() -> None:
     """
     Exercise 21: Tuple Mutability
 
@@ -511,7 +514,7 @@ def exercise_twenty_one():
     print(f"Same object? {id(t) == id((1, 2, [3, 4, 5, 99]))}")
 
 
-def exercise_twenty_two():
+def exercise_twenty_two() -> None:
     """
     Exercise 22: Nested Tuple Flattening
     Problem Statement: Write a recursive Python function to flatten a deeply nested tuple of tuples into a single flat tuple containing all the individual values.
@@ -540,7 +543,7 @@ def exercise_twenty_two():
     print(f"Flattened: {flattened}")
 
 
-def exercise_twenty_three():
+def exercise_twenty_three() -> None:
     """
     Exercise 23: Memory Efficiency
     Problem Statement: Use the sys module to measure and compare the memory consumed by a list and a tuple, each holding the same one million integer elements.
@@ -564,7 +567,7 @@ def exercise_twenty_three():
     print(f"Difference: {list_size - tuple_size} bytes")
 
 
-def exercise_twenty_four():
+def exercise_twenty_four() -> None:
     """
     Exercise 24: NamedTuples
 
@@ -600,7 +603,7 @@ def exercise_twenty_four():
     print(f"Highest paid: {highest_paid.name} (${highest_paid.salary:,})")
 
 
-def exercise_twenty_five():
+def exercise_twenty_five() -> None:
     """
     Exercise 25: The Hashability Paradox
 
@@ -628,7 +631,7 @@ def exercise_twenty_five():
         print(f"(1, [2]) as key: TypeError - {e}")
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: Basic Tuple Operations ===")
     exercise_one()
 
@@ -703,3 +706,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 25: Tuple Dictionary Keys ===")
     exercise_twenty_five()
+
+
+main()

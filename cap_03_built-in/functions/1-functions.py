@@ -52,6 +52,9 @@ common idioms.
 11. FUNCTIONAL TOOLS (map, filter, sorted with key=)
     Description: Apply a function across an iterable declaratively
     Example: list(map(lambda x: x + 1, [1, 2])) = [2, 3]
+
+Run:
+    poetry run python cap_03_built-in/functions/1-functions.py
 """
 
 from typing import Any, Callable
@@ -60,7 +63,7 @@ from typing import Any, Callable
 global_var: int = 10
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: Create a Function with Parameters
 
@@ -79,7 +82,7 @@ def exercise_one():
     demo("Kelly", 25)
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: Variable Length of Arguments (*args)
 
@@ -100,7 +103,7 @@ def exercise_two():
     func1(80, 100)
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Return Multiple Values from a Function
 
@@ -119,7 +122,7 @@ def exercise_three():
     print(f"{addition}, {subtraction}")
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Function with Default Argument
 
@@ -138,7 +141,7 @@ def exercise_four():
     show_employee("Jessa")
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Create an Inner Function
 
@@ -160,7 +163,7 @@ def exercise_five():
     print(outer(5, 10))
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Create a Recursive Function
 
@@ -180,7 +183,7 @@ def exercise_six():
     print(addition(10))
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: Assign a Different Name to Function and Call It
 
@@ -200,7 +203,7 @@ def exercise_seven():
     show_student("Emma", 26)
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: Generate a List of Even Numbers (Range Function)
 
@@ -218,7 +221,7 @@ def exercise_eight():
     print(even_numbers())
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: Find the Largest Item in a List
 
@@ -240,7 +243,7 @@ def exercise_nine():
     print(find_largest([4, 6, 8, 24, 12, 2]))
 
 
-def exercise_ten():
+def exercise_ten() -> None:
     """
     Exercise 10: Call Function using Positional and Keyword Arguments
 
@@ -261,7 +264,7 @@ def exercise_ten():
     describe_pet(animal_type="dog", pet_name="Willie")  # keyword
 
 
-def exercise_eleven():
+def exercise_eleven() -> None:
     """
     Exercise 11: Create a Function with Keyword Arguments
 
@@ -280,7 +283,7 @@ def exercise_eleven():
     print_info(name="Alice", age=30, city="New York")
 
 
-def exercise_twelve():
+def exercise_twelve() -> None:
     """
     Exercise 12: Modifying Global Variables
 
@@ -302,7 +305,7 @@ def exercise_twelve():
     print(f"Modified: {global_var}")
 
 
-def exercise_thirteen():
+def exercise_thirteen() -> None:
     """
     Exercise 13: Recursive Factorial (Non-Negative Integers)
 
@@ -323,7 +326,7 @@ def exercise_thirteen():
     print(f"The factorial of {number} is {factorial(number)}")
 
 
-def exercise_fourteen():
+def exercise_fourteen() -> None:
     """
     Exercise 14: Create a Lambda Function to Square a Number
 
@@ -340,7 +343,7 @@ def exercise_fourteen():
     print((lambda x: x**2)(number))
 
 
-def exercise_fifteen():
+def exercise_fifteen() -> None:
     """
     Exercise 15: Filter a List Using Lambda and filter()
 
@@ -357,7 +360,7 @@ def exercise_fifteen():
     print(list(filter(lambda x: x % 2 == 0, numbers)))
 
 
-def exercise_sixteen():
+def exercise_sixteen() -> None:
     """
     Exercise 16: Transform a List Using Lambda and map()
 
@@ -373,7 +376,7 @@ def exercise_sixteen():
     print(list(map(lambda x: x * 2, numbers)))
 
 
-def exercise_seventeen():
+def exercise_seventeen() -> None:
     """
     Exercise 17: Sort Complex Data with sorted() and Lambda
 
@@ -389,7 +392,7 @@ def exercise_seventeen():
     print(sorted(students, key=lambda student: student[1]))
 
 
-def exercise_eighteen():
+def exercise_eighteen() -> None:
     """
     Exercise 18: Create a Higher-Order Function
 
@@ -416,7 +419,7 @@ def exercise_eighteen():
     print(f"Multiplication Result: {apply_operation(multiply, 5, 3)}")
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: Create a Function with Parameters ===")
     exercise_one()
 
@@ -470,3 +473,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 18: Create a Higher-Order Function ===")
     exercise_eighteen()
+
+
+main()

@@ -46,6 +46,9 @@ the file runs end to end without human interaction.
 8. BINARY MODE
    Description: Read/write raw bytes for non-text files (images, etc.)
    Example: open("img.jpg", "rb").read()
+
+Run:
+    poetry run python cap_03_built-in/files/1-file-handling.py
 """
 
 import os
@@ -53,7 +56,7 @@ import tempfile
 from pathlib import Path
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: Write User Name to File
 
@@ -72,7 +75,7 @@ def exercise_one():
         print(f"Wrote to user.txt: {user_file.read_text()}")
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: Read and Print Complete File
 
@@ -90,7 +93,7 @@ def exercise_two():
             print(file.read())
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Read File Line by Line Using Loop
 
@@ -110,7 +113,7 @@ def exercise_three():
                 print(line.rstrip("\n"))
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Read File Lines into a List
 
@@ -129,7 +132,7 @@ def exercise_four():
             print(file.readlines())
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Append New Sentence to Existing File
 
@@ -149,7 +152,7 @@ def exercise_five():
         print(notes_file.read_text(), end="")
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Clear All File Content
 
@@ -169,7 +172,7 @@ def exercise_six():
         print(f"File size: {temp_file.stat().st_size} bytes")
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: Write Text to New File
 
@@ -189,7 +192,7 @@ def exercise_seven():
         print(output_file.read_text(), end="")
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: Check If File Exists
 
@@ -209,7 +212,7 @@ def exercise_eight():
             print("File exists." if path.exists() else "File does not exist.")
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: Handle Missing File with Try-Except
 
@@ -229,7 +232,7 @@ def exercise_nine():
             print("Error: The file was not found.")
 
 
-def exercise_ten():
+def exercise_ten() -> None:
     """
     Exercise 10: Count Total Lines in File
 
@@ -249,7 +252,7 @@ def exercise_ten():
         print(f"Total lines: {total}")
 
 
-def exercise_eleven():
+def exercise_eleven() -> None:
     """
     Exercise 11: Count Total Words in File
 
@@ -268,7 +271,7 @@ def exercise_eleven():
         print(f"Total words: {total}")
 
 
-def exercise_twelve():
+def exercise_twelve() -> None:
     """
     Exercise 12: Count Total Characters in File
 
@@ -286,7 +289,7 @@ def exercise_twelve():
         print(f"Total characters: {len(data_file.read_text())}")
 
 
-def exercise_thirteen():
+def exercise_thirteen() -> None:
     """
     Exercise 13: Count Specific Word Occurrences in File
 
@@ -305,7 +308,7 @@ def exercise_thirteen():
         print(f"Occurrences of 'Python': {count}")
 
 
-def exercise_fourteen():
+def exercise_fourteen() -> None:
     """
     Exercise 14: Read Only First N Lines
 
@@ -327,7 +330,7 @@ def exercise_fourteen():
                 print(line.rstrip("\n"))
 
 
-def exercise_fifteen():
+def exercise_fifteen() -> None:
     """
     Exercise 15: Read Only Last N Lines
 
@@ -347,7 +350,7 @@ def exercise_fifteen():
             print(line)
 
 
-def exercise_sixteen():
+def exercise_sixteen() -> None:
     """
     Exercise 16: Read Specific Line Numbers from File
 
@@ -367,7 +370,7 @@ def exercise_sixteen():
             print(lines[position - 1])
 
 
-def exercise_seventeen():
+def exercise_seventeen() -> None:
     """
     Exercise 17: Find Longest Word in File
 
@@ -386,7 +389,7 @@ def exercise_seventeen():
         print(f"Longest word: {longest}")
 
 
-def exercise_eighteen():
+def exercise_eighteen() -> None:
     """
     Exercise 18: Count Each Letter Frequency in File
 
@@ -408,7 +411,7 @@ def exercise_eighteen():
         print(freq)
 
 
-def exercise_nineteen():
+def exercise_nineteen() -> None:
     """
     Exercise 19: Search Word and Print Matching Line Numbers
 
@@ -429,7 +432,7 @@ def exercise_nineteen():
                     print(f'"Python" found on line {number}')
 
 
-def exercise_twenty():
+def exercise_twenty() -> None:
     """
     Exercise 20: Strip Extra Whitespace and Save to New File
 
@@ -450,7 +453,7 @@ def exercise_twenty():
         print(clean.read_text(), end="")
 
 
-def exercise_twenty_one():
+def exercise_twenty_one() -> None:
     """
     Exercise 21: Convert Uppercase to Lowercase and Vice Versa
 
@@ -470,7 +473,7 @@ def exercise_twenty_one():
         print(swapped.read_text())
 
 
-def exercise_twenty_two():
+def exercise_twenty_two() -> None:
     """
     Exercise 22: Find and Replace a Word Throughout File
 
@@ -489,7 +492,7 @@ def exercise_twenty_two():
         print(story.read_text())
 
 
-def exercise_twenty_three():
+def exercise_twenty_three() -> None:
     """
     Exercise 23: Get File Size in Kilobytes
 
@@ -508,7 +511,7 @@ def exercise_twenty_three():
         print(f"File size: {size_kb:.1f} KB")
 
 
-def exercise_twenty_four():
+def exercise_twenty_four() -> None:
     """
     Exercise 24: Copy File Using Binary Mode
 
@@ -529,7 +532,7 @@ def exercise_twenty_four():
         print(f"Copied. destination.txt = {destination.read_text()}")
 
 
-def exercise_twenty_five():
+def exercise_twenty_five() -> None:
     """
     Exercise 25: Rename a Single File
 
@@ -549,7 +552,7 @@ def exercise_twenty_five():
         print("File renamed successfully." if new_name.exists() else "Rename failed.")
 
 
-def exercise_twenty_six():
+def exercise_twenty_six() -> None:
     """
     Exercise 26: Rename Multiple Files with Prefix
 
@@ -570,7 +573,7 @@ def exercise_twenty_six():
         print(sorted(p.name for p in base.glob("*.txt")))
 
 
-def exercise_twenty_seven():
+def exercise_twenty_seven() -> None:
     """
     Exercise 27: Delete a File from Disk
 
@@ -590,7 +593,7 @@ def exercise_twenty_seven():
             print("temp.txt has been deleted.")
 
 
-def exercise_twenty_eight():
+def exercise_twenty_eight() -> None:
     """
     Exercise 28: Merge Two Files into One
 
@@ -613,7 +616,7 @@ def exercise_twenty_eight():
         print(merged.read_text(), end="")
 
 
-def exercise_twenty_nine():
+def exercise_twenty_nine() -> None:
     """
     Exercise 29: Reverse Line Order and Save to New File
 
@@ -634,7 +637,7 @@ def exercise_twenty_nine():
         print(reversed_file.read_text(), end="")
 
 
-def exercise_thirty():
+def exercise_thirty() -> None:
     """
     Exercise 30: List All Files in Directory and Save
 
@@ -657,7 +660,7 @@ def exercise_thirty():
         print(file_list.read_text(), end="")
 
 
-def exercise_thirty_one():
+def exercise_thirty_one() -> None:
     """
     Exercise 31: Read and Write Binary Image File
 
@@ -677,7 +680,7 @@ def exercise_thirty_one():
         print(f"Copy identical: {photo.read_bytes() == copy.read_bytes()}")
 
 
-def exercise_thirty_two():
+def exercise_thirty_two() -> None:
     """
     Exercise 32: Extract and Sort Unique Words from File
 
@@ -696,7 +699,7 @@ def exercise_thirty_two():
         print(unique_sorted)
 
 
-def exercise_thirty_three():
+def exercise_thirty_three() -> None:
     """
     Exercise 33: Filter Log File Lines Containing ERROR Keyword
 
@@ -719,7 +722,7 @@ def exercise_thirty_three():
                     print(line.rstrip("\n"))
 
 
-def exercise_thirty_four():
+def exercise_thirty_four() -> None:
     """
     Exercise 34: Split Large File into Smaller 10-Line Files
 
@@ -743,7 +746,7 @@ def exercise_thirty_four():
             print(f"{part.name}: {len(part.read_text().splitlines())} lines")
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: Write User Name to File ===")
     exercise_one()
 
@@ -845,3 +848,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 34: Split Large File into Smaller 10-Line Files ===")
     exercise_thirty_four()
+
+
+main()

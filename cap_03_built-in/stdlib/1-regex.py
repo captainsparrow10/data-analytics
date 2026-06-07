@@ -36,12 +36,15 @@ type-clean under strict checking.
 6. ALTERNATION (|) and DOT (.)
    Description: | matches either side; . matches any character except newline
    Example: cat|dog
+
+Run:
+    poetry run python cap_03_built-in/stdlib/1-regex.py
 """
 
 import re
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: Check Allowed Characters
 
@@ -60,7 +63,7 @@ def exercise_one():
         print("Invalid")
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: Match Zero or More
 
@@ -76,7 +79,7 @@ def exercise_two():
         print(f"{candidate!r}: {'match' if re.fullmatch(pattern, candidate) else 'no match'}")
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Match One or More
 
@@ -93,7 +96,7 @@ def exercise_three():
         print(f"{candidate!r}: {'match' if re.fullmatch(pattern, candidate) else 'no match'}")
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Match Optional Characters
 
@@ -109,7 +112,7 @@ def exercise_four():
         print(f"{candidate!r}: {'match' if re.fullmatch(pattern, candidate) else 'no match'}")
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Match Exact Occurrences
 
@@ -125,7 +128,7 @@ def exercise_five():
         print(f"{candidate!r}: {'match' if re.fullmatch(pattern, candidate) else 'no match'}")
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Match Range of Occurrences
 
@@ -141,7 +144,7 @@ def exercise_six():
         print(f"{candidate!r}: {'match' if re.fullmatch(pattern, candidate) else 'no match'}")
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: Find Underscore-Joined Lowercase
 
@@ -161,7 +164,7 @@ def exercise_seven():
             print(candidate)
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: PascalCase Match
 
@@ -179,7 +182,7 @@ def exercise_eight():
             print(candidate)
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: Match Start and End
 
@@ -196,7 +199,7 @@ def exercise_nine():
         print(f"{candidate!r}: {'match' if re.fullmatch(pattern, candidate) else 'no match'}")
 
 
-def exercise_ten():
+def exercise_ten() -> None:
     """
     Exercise 10: Match Word at Start
 
@@ -214,7 +217,7 @@ def exercise_ten():
             print(candidate)
 
 
-def exercise_eleven():
+def exercise_eleven() -> None:
     """
     Exercise 11: Match Word at End
 
@@ -233,7 +236,7 @@ def exercise_eleven():
             print(candidate)
 
 
-def exercise_twelve():
+def exercise_twelve() -> None:
     """
     Exercise 12: Find Words Containing a Letter
 
@@ -249,7 +252,7 @@ def exercise_twelve():
     print(re.findall(r"\b\w*z\w*\b", text))
 
 
-def exercise_thirteen():
+def exercise_thirteen() -> None:
     """
     Exercise 13: Find Letter in the Middle
 
@@ -267,7 +270,7 @@ def exercise_thirteen():
     print(middle)
 
 
-def exercise_fourteen():
+def exercise_fourteen() -> None:
     """
     Exercise 14: Match Adjacent Words
 
@@ -288,7 +291,7 @@ def exercise_fourteen():
             print(match.group())
 
 
-def exercise_fifteen():
+def exercise_fifteen() -> None:
     """
     Exercise 15: Filter by Starting Letter
 
@@ -304,7 +307,7 @@ def exercise_fifteen():
     print(re.findall(r"\b[ae]\w*", text))
 
 
-def exercise_sixteen():
+def exercise_sixteen() -> None:
     """
     Exercise 16: Validate Alphanumeric ID
 
@@ -323,7 +326,7 @@ def exercise_sixteen():
             print(f"{candidate}: valid")
 
 
-def exercise_seventeen():
+def exercise_seventeen() -> None:
     """
     Exercise 17: Check Starting Number
 
@@ -339,7 +342,7 @@ def exercise_seventeen():
             print(candidate)
 
 
-def exercise_eighteen():
+def exercise_eighteen() -> None:
     """
     Exercise 18: Number at End
 
@@ -355,7 +358,7 @@ def exercise_eighteen():
             print(candidate)
 
 
-def exercise_nineteen():
+def exercise_nineteen() -> None:
     """
     Exercise 19: Clean IP Addresses
 
@@ -371,7 +374,7 @@ def exercise_nineteen():
         print(re.sub(r"\b0+(\d)", r"\1", ip))
 
 
-def exercise_twenty():
+def exercise_twenty() -> None:
     """
     Exercise 20: Convert Date Format
 
@@ -387,7 +390,7 @@ def exercise_twenty():
         print(re.sub(r"(\d{4})-(\d{2})-(\d{2})", r"\3-\2-\1", date))
 
 
-def exercise_twenty_one():
+def exercise_twenty_one() -> None:
     """
     Exercise 21: Extract 1-3 Digit Numbers
 
@@ -403,7 +406,7 @@ def exercise_twenty_one():
     print(re.findall(r"\b\d{1,3}\b", text))
 
 
-def exercise_twenty_two():
+def exercise_twenty_two() -> None:
     """
     Exercise 22: Search Literal Strings
 
@@ -422,7 +425,7 @@ def exercise_twenty_two():
             print(f'Found "{target}" at {match.start()}-{match.end()}')
 
 
-def exercise_twenty_three():
+def exercise_twenty_three() -> None:
     """
     Exercise 23: Find Pattern Location
 
@@ -439,7 +442,7 @@ def exercise_twenty_three():
         print(f'Found "brown fox" at start={match.start()}, end={match.end()}')
 
 
-def exercise_twenty_four():
+def exercise_twenty_four() -> None:
     """
     Exercise 24: Find All Substrings
 
@@ -456,7 +459,7 @@ def exercise_twenty_four():
     print(f"Total count: {len(matches)}")
 
 
-def exercise_twenty_five():
+def exercise_twenty_five() -> None:
     """
     Exercise 25: Iterate Matches
 
@@ -473,7 +476,7 @@ def exercise_twenty_five():
         print(f"{match.group()} at {match.start()}-{match.end()}")
 
 
-def exercise_twenty_six():
+def exercise_twenty_six() -> None:
     """
     Exercise 26: Extract Date from URL
 
@@ -496,7 +499,7 @@ def exercise_twenty_six():
             print(f"year={match.group(1)} month={match.group(2)} day={match.group(3)}")
 
 
-def exercise_twenty_seven():
+def exercise_twenty_seven() -> None:
     """
     Exercise 27: Extract All Numbers
 
@@ -512,7 +515,7 @@ def exercise_twenty_seven():
     print(re.findall(r"\d+(?:\.\d+)?", text))
 
 
-def exercise_twenty_eight():
+def exercise_twenty_eight() -> None:
     """
     Exercise 28: Extract Email Addresses
 
@@ -532,7 +535,7 @@ def exercise_twenty_eight():
     print(re.findall(r"[\w.+-]+@[\w-]+\.[\w.-]+", text))
 
 
-def exercise_twenty_nine():
+def exercise_twenty_nine() -> None:
     """
     Exercise 29: Swap Characters
 
@@ -551,7 +554,7 @@ def exercise_twenty_nine():
         print(re.sub(r"[ _]", swap, text))
 
 
-def exercise_thirty():
+def exercise_thirty() -> None:
     """
     Exercise 30: Replace Multiple Delimiters
 
@@ -568,7 +571,7 @@ def exercise_thirty():
         print(re.sub(r"[ ,.]+", ":", text))
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: Check Allowed Characters ===")
     exercise_one()
 
@@ -658,3 +661,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 30: Replace Multiple Delimiters ===")
     exercise_thirty()
+
+
+main()

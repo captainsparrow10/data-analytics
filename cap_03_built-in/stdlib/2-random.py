@@ -35,6 +35,9 @@ cryptographically random by design, so their output legitimately varies each run
 6. STRING CONSTANTS (string.ascii_letters, digits, ...)
    Description: Ready-made character pools for building random strings
    Example: string.ascii_uppercase
+
+Run:
+    poetry run python cap_03_built-in/stdlib/2-random.py
 """
 
 import datetime
@@ -43,7 +46,7 @@ import secrets
 import string
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: Generate 3 Random Integers Divisible by 5
 
@@ -60,7 +63,7 @@ def exercise_one():
     print(numbers)
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: Random Lottery Pick
 
@@ -78,7 +81,7 @@ def exercise_two():
     print(f"Winning tickets: {winners}")
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Generate 6-Digit Secure OTP
 
@@ -94,7 +97,7 @@ def exercise_three():
     print(f"Your OTP is: {otp}")
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Pick a Random Character
 
@@ -111,7 +114,7 @@ def exercise_four():
     print(random.choice(name))
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Generate a Random String
 
@@ -128,7 +131,7 @@ def exercise_five():
     print(result)
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Generate a Random Password
 
@@ -153,7 +156,7 @@ def exercise_six():
     print("".join(chars))
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: Calculate Multiplication of Two Random Floats
 
@@ -171,7 +174,7 @@ def exercise_seven():
     print(f"{first:.3f} * {second:.3f} = {first * second:.3f}")
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: Generate Random Token and URL
 
@@ -187,7 +190,7 @@ def exercise_eight():
     print(f"URL-safe token: {secrets.token_urlsafe(16)}")
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: Dice Roll with a Fixed Seed
 
@@ -207,7 +210,7 @@ def exercise_nine():
     print()
 
 
-def exercise_ten():
+def exercise_ten() -> None:
     """
     Exercise 10: Generate a Random Date
 
@@ -227,7 +230,7 @@ def exercise_ten():
     print(random_date)
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: Generate 3 Random Integers Divisible by 5 ===")
     exercise_one()
 
@@ -257,3 +260,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 10: Generate a Random Date ===")
     exercise_ten()
+
+
+main()

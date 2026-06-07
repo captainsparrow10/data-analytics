@@ -63,12 +63,15 @@ fundamentals and common idioms.
 14. LENGTH (len(d))
     Description: Number of key-value pairs
     Example: len({"a": 1, "b": 2}) = 2
+
+Run:
+    poetry run python cap_03_built-in/data-structures/4-dictionary.py
 """
 
 from typing import Any, cast
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: Basic Dictionary Operations
 
@@ -88,7 +91,7 @@ def exercise_one():
     print(f"Name: {student['name']}")
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: Dictionary Operations
 
@@ -110,7 +113,7 @@ def exercise_two():
     print(f"'price' in car: {'price' in car}")
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Dictionary from Two Lists
 
@@ -128,7 +131,7 @@ def exercise_three():
     print(dict(zip(keys, values)))
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Clear Dictionary
 
@@ -145,7 +148,7 @@ def exercise_four():
     print(inventory)
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Merge Dictionaries
 
@@ -162,7 +165,7 @@ def exercise_five():
     print(dict1 | dict2)
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Access Nested Dictionary
 
@@ -179,7 +182,7 @@ def exercise_six():
     print(f"City: {person['address']['city']}")
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: Access 'history' Key From Nested Dictionary
 
@@ -195,7 +198,7 @@ def exercise_seven():
     print(f"History grade: {student['grades']['history']}")
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: Initialize Dictionary with Default Values
 
@@ -213,7 +216,7 @@ def exercise_eight():
     print(dict.fromkeys(keys, default))
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: Rename a Key of Dictionary
 
@@ -230,7 +233,7 @@ def exercise_nine():
     print(employee)
 
 
-def exercise_ten():
+def exercise_ten() -> None:
     """
     Exercise 10: Delete a List of Keys
 
@@ -250,7 +253,7 @@ def exercise_ten():
     print(product)
 
 
-def exercise_eleven():
+def exercise_eleven() -> None:
     """
     Exercise 11: Check Value Existence
 
@@ -267,7 +270,7 @@ def exercise_eleven():
     print(f"'manager' exists as a value: {'manager' in roles.values()}")
 
 
-def exercise_twelve():
+def exercise_twelve() -> None:
     """
     Exercise 12: Sum All Values
 
@@ -283,7 +286,7 @@ def exercise_twelve():
     print(f"Total expenses: {sum(expenses.values())}")
 
 
-def exercise_thirteen():
+def exercise_thirteen() -> None:
     """
     Exercise 13: Extract Subset of Keys
 
@@ -307,7 +310,7 @@ def exercise_thirteen():
     print(subset)
 
 
-def exercise_fourteen():
+def exercise_fourteen() -> None:
     """
     Exercise 14: Map Two Lists (zip)
 
@@ -324,7 +327,7 @@ def exercise_fourteen():
     print(dict(zip(attributes, details)))
 
 
-def exercise_fifteen():
+def exercise_fifteen() -> None:
     """
     Exercise 15: Count Character Frequencies
 
@@ -343,7 +346,7 @@ def exercise_fifteen():
     print(freq)
 
 
-def exercise_sixteen():
+def exercise_sixteen() -> None:
     """
     Exercise 16: Modify Nested Dictionary
 
@@ -363,7 +366,7 @@ def exercise_sixteen():
     print(company)
 
 
-def exercise_seventeen():
+def exercise_seventeen() -> None:
     """
     Exercise 17: Update Deeply Nested Key
 
@@ -382,7 +385,7 @@ def exercise_seventeen():
     print(data)
 
 
-def exercise_eighteen():
+def exercise_eighteen() -> None:
     """
     Exercise 18: Dictionary Comprehension
 
@@ -398,7 +401,7 @@ def exercise_eighteen():
     print(squares)
 
 
-def exercise_nineteen():
+def exercise_nineteen() -> None:
     """
     Exercise 19: Filter Dictionary
 
@@ -414,7 +417,7 @@ def exercise_nineteen():
     print(passing)
 
 
-def exercise_twenty():
+def exercise_twenty() -> None:
     """
     Exercise 20: Key of Minimum Value
 
@@ -432,7 +435,7 @@ def exercise_twenty():
     print(f"Lowest stock item: {lowest}")
 
 
-def exercise_twenty_one():
+def exercise_twenty_one() -> None:
     """
     Exercise 21: Key of Maximum Value
 
@@ -449,7 +452,7 @@ def exercise_twenty_one():
     print(f"Top scorer: {top}")
 
 
-def exercise_twenty_two():
+def exercise_twenty_two() -> None:
     """
     Exercise 22: List of Tuples to Dictionary
 
@@ -465,7 +468,7 @@ def exercise_twenty_two():
     print(dict(pairs))
 
 
-def exercise_twenty_three():
+def exercise_twenty_three() -> None:
     """
     Exercise 23: Find Common Keys
 
@@ -482,7 +485,7 @@ def exercise_twenty_three():
     print(f"Common keys: {d1.keys() & d2.keys()}")
 
 
-def exercise_twenty_four():
+def exercise_twenty_four() -> None:
     """
     Exercise 24: Dictionary Difference
 
@@ -499,7 +502,7 @@ def exercise_twenty_four():
     print(f"Keys only in d1: {d1.keys() - d2.keys()}")
 
 
-def exercise_twenty_five():
+def exercise_twenty_five() -> None:
     """
     Exercise 25: Dictionary Intersection
 
@@ -517,7 +520,7 @@ def exercise_twenty_five():
     print(f"Intersection: {shared}")
 
 
-def exercise_twenty_six():
+def exercise_twenty_six() -> None:
     """
     Exercise 26: Word Count
 
@@ -536,7 +539,7 @@ def exercise_twenty_six():
     print(counts)
 
 
-def exercise_twenty_seven():
+def exercise_twenty_seven() -> None:
     """
     Exercise 27: Remove None Values
 
@@ -556,7 +559,7 @@ def exercise_twenty_seven():
     print(cleaned)
 
 
-def exercise_twenty_eight():
+def exercise_twenty_eight() -> None:
     """
     Exercise 28: Sort Dictionary by Keys
 
@@ -572,7 +575,7 @@ def exercise_twenty_eight():
     print(dict(sorted(data.items())))
 
 
-def exercise_twenty_nine():
+def exercise_twenty_nine() -> None:
     """
     Exercise 29: Sort Dictionary by Values
 
@@ -588,7 +591,7 @@ def exercise_twenty_nine():
     print(dict(sorted(scores.items(), key=lambda item: item[1])))
 
 
-def exercise_thirty():
+def exercise_thirty() -> None:
     """
     Exercise 30: Unique Values Check
 
@@ -605,7 +608,7 @@ def exercise_thirty():
     print(all_unique)
 
 
-def exercise_thirty_one():
+def exercise_thirty_one() -> None:
     """
     Exercise 31: Check for Subset
 
@@ -622,7 +625,7 @@ def exercise_thirty_one():
     print(subset.items() <= main.items())
 
 
-def exercise_thirty_two():
+def exercise_thirty_two() -> None:
     """
     Exercise 32: Sort Dictionary by Value Length
 
@@ -638,7 +641,7 @@ def exercise_thirty_two():
     print(dict(sorted(words.items(), key=lambda item: len(item[1]))))
 
 
-def exercise_thirty_three():
+def exercise_thirty_three() -> None:
     """
     Exercise 33: Key with Longest List
 
@@ -659,7 +662,7 @@ def exercise_thirty_three():
     print(longest)
 
 
-def exercise_thirty_four():
+def exercise_thirty_four() -> None:
     """
     Exercise 34: Convert Dictionary to JSON
 
@@ -681,7 +684,7 @@ def exercise_thirty_four():
     print(json.dumps(person, indent=2))
 
 
-def exercise_thirty_five():
+def exercise_thirty_five() -> None:
     """
     Exercise 35: Invert Dictionary
 
@@ -698,7 +701,7 @@ def exercise_thirty_five():
     print(inverted)
 
 
-def exercise_thirty_six():
+def exercise_thirty_six() -> None:
     """
     Exercise 36: Invert with Duplicate Values
 
@@ -718,7 +721,7 @@ def exercise_thirty_six():
     print(grouped)
 
 
-def exercise_thirty_seven():
+def exercise_thirty_seven() -> None:
     """
     Exercise 37: Flatten Nested Dictionary
 
@@ -748,7 +751,7 @@ def exercise_thirty_seven():
     print(flatten(nested))
 
 
-def exercise_thirty_eight():
+def exercise_thirty_eight() -> None:
     """
     Exercise 38: Group by First Letter
 
@@ -766,7 +769,7 @@ def exercise_thirty_eight():
     print(groups)
 
 
-def exercise_thirty_nine():
+def exercise_thirty_nine() -> None:
     """
     Exercise 39: Merge and Sum Overlapping
 
@@ -786,7 +789,7 @@ def exercise_thirty_nine():
     print(merged)
 
 
-def exercise_forty():
+def exercise_forty() -> None:
     """
     Exercise 40: Deep vs. Shallow Copy
 
@@ -811,7 +814,7 @@ def exercise_forty():
     print(f"deep copy is independent: {deep['scores']}")
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: Basic Dictionary Operations ===")
     exercise_one()
 
@@ -931,3 +934,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 40: Deep vs. Shallow Copy ===")
     exercise_forty()
+
+
+main()

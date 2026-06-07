@@ -50,6 +50,9 @@ contains 30 exercises covering iterators and generators.
 10. LAZY EVALUATION / MEMORY
     Description: Values are produced on demand, enabling streaming over huge inputs
     Example: reading a file line by line instead of loading it whole
+
+Run:
+    poetry run python cap_03_built-in/functions/2-iterators-generators.py
 """
 
 import itertools
@@ -58,7 +61,7 @@ from pathlib import Path
 from typing import Any, Generator, Iterable, Iterator, cast
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: The Square Generator
 
@@ -77,7 +80,7 @@ def exercise_one():
     print(*squares(5))
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: Even Number Iterator
 
@@ -108,7 +111,7 @@ def exercise_two():
     print(*EvenNumbers(10))
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Custom Range
 
@@ -129,7 +132,7 @@ def exercise_three():
     print(*my_range(2, 10, 2))
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Reverse String Iterator
 
@@ -158,7 +161,7 @@ def exercise_four():
     print(*ReverseString("hello"))
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Vowel Filter
 
@@ -178,7 +181,7 @@ def exercise_five():
     print(*vowels("Hello, World!"))
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Power of Two
 
@@ -195,7 +198,7 @@ def exercise_six():
     print(*powers)
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: Finite Fibonacci
 
@@ -216,7 +219,7 @@ def exercise_seven():
     print(*fibonacci(8))
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: Infinite Counter
 
@@ -237,7 +240,7 @@ def exercise_eight():
     print(*itertools.islice(count_up(), 5))
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: Manual Iteration
 
@@ -259,7 +262,7 @@ def exercise_nine():
     print()
 
 
-def exercise_ten():
+def exercise_ten() -> None:
     """
     Exercise 10: Step Iterator
 
@@ -280,7 +283,7 @@ def exercise_ten():
     print(*frange(0.0, 1.0, 0.25))
 
 
-def exercise_eleven():
+def exercise_eleven() -> None:
     """
     Exercise 11: File Line Reader
 
@@ -305,7 +308,7 @@ def exercise_eleven():
             print(line)
 
 
-def exercise_twelve():
+def exercise_twelve() -> None:
     """
     Exercise 12: CSV Row Parser
 
@@ -334,7 +337,7 @@ def exercise_twelve():
             print(row)
 
 
-def exercise_thirteen():
+def exercise_thirteen() -> None:
     """
     Exercise 13: The Pipeline
 
@@ -358,7 +361,7 @@ def exercise_thirteen():
     print(*gen_squares(gen_numbers([1, 2, 3, 4, 5])))
 
 
-def exercise_fourteen():
+def exercise_fourteen() -> None:
     """
     Exercise 14: List Flattener
 
@@ -382,7 +385,7 @@ def exercise_fourteen():
     print(*flatten(nested))
 
 
-def exercise_fifteen():
+def exercise_fifteen() -> None:
     """
     Exercise 15: Batch Processing
 
@@ -408,7 +411,7 @@ def exercise_fifteen():
         print(chunk)
 
 
-def exercise_sixteen():
+def exercise_sixteen() -> None:
     """
     Exercise 16: Prime Sieve
 
@@ -432,7 +435,7 @@ def exercise_sixteen():
     print(*primes(30))
 
 
-def exercise_seventeen():
+def exercise_seventeen() -> None:
     """
     Exercise 17: Running Average
 
@@ -453,7 +456,7 @@ def exercise_seventeen():
     print(*running_average([10, 20, 30, 40, 50]))
 
 
-def exercise_eighteen():
+def exercise_eighteen() -> None:
     """
     Exercise 18: Sliding Window
 
@@ -472,7 +475,7 @@ def exercise_eighteen():
     print(*sliding_window([1, 2, 3, 4, 5], 3))
 
 
-def exercise_nineteen():
+def exercise_nineteen() -> None:
     """
     Exercise 19: Log Filter
 
@@ -503,7 +506,7 @@ def exercise_nineteen():
             print(line)
 
 
-def exercise_twenty():
+def exercise_twenty() -> None:
     """
     Exercise 20: Unique Element Filter
 
@@ -525,7 +528,7 @@ def exercise_twenty():
     print(*unique([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]))
 
 
-def exercise_twenty_one():
+def exercise_twenty_one() -> None:
     """
     Exercise 21: The Accumulator (send)
 
@@ -550,7 +553,7 @@ def exercise_twenty_one():
     print(acc.send(10), acc.send(20), acc.send(30))
 
 
-def exercise_twenty_two():
+def exercise_twenty_two() -> None:
     """
     Exercise 22: Custom Zip
 
@@ -575,7 +578,7 @@ def exercise_twenty_two():
     print(*my_zip([1, 2, 3], ["a", "b", "c"]))
 
 
-def exercise_twenty_three():
+def exercise_twenty_three() -> None:
     """
     Exercise 23: Binary Tree Traversal
 
@@ -616,7 +619,7 @@ def exercise_twenty_three():
     print(*inorder(root))
 
 
-def exercise_twenty_four():
+def exercise_twenty_four() -> None:
     """
     Exercise 24: Data Throttler
 
@@ -636,7 +639,7 @@ def exercise_twenty_four():
     print(*throttle(list(range(1, 21)), 4))
 
 
-def exercise_twenty_five():
+def exercise_twenty_five() -> None:
     """
     Exercise 25: Generator State Machine
 
@@ -657,7 +660,7 @@ def exercise_twenty_five():
     print(*itertools.islice(traffic_light(), 6))
 
 
-def exercise_twenty_six():
+def exercise_twenty_six() -> None:
     """
     Exercise 26: Peekable Iterator
 
@@ -696,7 +699,7 @@ def exercise_twenty_six():
     print(f"next: {next(peekable)}")
 
 
-def exercise_twenty_seven():
+def exercise_twenty_seven() -> None:
     """
     Exercise 27: Exception Handler
 
@@ -725,7 +728,7 @@ def exercise_twenty_seven():
     print(next(gen))
 
 
-def exercise_twenty_eight():
+def exercise_twenty_eight() -> None:
     """
     Exercise 28: Recursive Directory Walker
 
@@ -756,7 +759,7 @@ def exercise_twenty_eight():
             print(file_path.name)
 
 
-def exercise_twenty_nine():
+def exercise_twenty_nine() -> None:
     """
     Exercise 29: Interleaved Streams
 
@@ -781,7 +784,7 @@ def exercise_twenty_nine():
     print(*interleave([1, 2, 3], ["a", "b", "c", "d"]))
 
 
-def exercise_thirty():
+def exercise_thirty() -> None:
     """
     Exercise 30: Generator Cleanup
 
@@ -808,7 +811,7 @@ def exercise_thirty():
     reader.close()       # triggers the finally block early
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: The Square Generator ===")
     exercise_one()
 
@@ -898,3 +901,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 30: Generator Cleanup ===")
     exercise_thirty()
+
+
+main()

@@ -35,6 +35,9 @@ checking. Exercise 4 uses a temporary file so it runs without touching the works
 6. ERROR HANDLING (json.JSONDecodeError)
    Description: Raised when the text is not valid JSON
    Example: except json.JSONDecodeError: ...
+
+Run:
+    poetry run python cap_03_built-in/files/2-json.py
 """
 
 import json
@@ -43,7 +46,7 @@ from pathlib import Path
 from typing import Any
 
 
-def exercise_one():
+def exercise_one() -> None:
     """
     Exercise 1: Dictionary to JSON Conversion
 
@@ -59,7 +62,7 @@ def exercise_one():
     print(json.dumps(data))
 
 
-def exercise_two():
+def exercise_two() -> None:
     """
     Exercise 2: Access JSON Value
 
@@ -76,7 +79,7 @@ def exercise_two():
     print(data["key2"])
 
 
-def exercise_three():
+def exercise_three() -> None:
     """
     Exercise 3: Pretty Print JSON
 
@@ -93,7 +96,7 @@ def exercise_three():
     print(json.dumps(data, indent=2, separators=(",", " = ")))
 
 
-def exercise_four():
+def exercise_four() -> None:
     """
     Exercise 4: Sort and Write JSON
 
@@ -113,7 +116,7 @@ def exercise_four():
         print(json_file.read_text())
 
 
-def exercise_five():
+def exercise_five() -> None:
     """
     Exercise 5: Access Nested JSON Key
 
@@ -132,7 +135,7 @@ def exercise_five():
     print(data["company"]["employee"]["payble"]["salary"])
 
 
-def exercise_six():
+def exercise_six() -> None:
     """
     Exercise 6: Object to JSON
 
@@ -155,7 +158,7 @@ def exercise_six():
     print(json.dumps(vehicle.__dict__, indent=2))
 
 
-def exercise_seven():
+def exercise_seven() -> None:
     """
     Exercise 7: JSON to Object
 
@@ -179,7 +182,7 @@ def exercise_seven():
     print(f"{vehicle.name} | {vehicle.engine} | {vehicle.price}")
 
 
-def exercise_eight():
+def exercise_eight() -> None:
     """
     Exercise 8: JSON Validation
 
@@ -201,7 +204,7 @@ def exercise_eight():
     print(f"Corrected: {json.loads(corrected)}")
 
 
-def exercise_nine():
+def exercise_nine() -> None:
     """
     Exercise 9: Parse Array for Specific Key
 
@@ -222,7 +225,7 @@ def exercise_nine():
     print(names)
 
 
-if __name__ == "__main__":
+def main() -> None:
     print("=== Exercise 1: Dictionary to JSON Conversion ===")
     exercise_one()
 
@@ -249,3 +252,6 @@ if __name__ == "__main__":
 
     print("\n=== Exercise 9: Parse Array for Specific Key ===")
     exercise_nine()
+
+
+main()
