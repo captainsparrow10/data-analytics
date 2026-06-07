@@ -15,6 +15,7 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 | 1 | Python Built-ins | [cap_03_built-in/](cap_03_built-in/README.md) |
 | 2 | NumPy Basics: Arrays and Vectorized Computation | [cap_04_numpy/](cap_04_numpy/README.md) |
 | 3 | Getting Started with pandas | [cap_05_pandas/](cap_05_pandas/README.md) |
+| 6 | Data Loading, Storage, and File Formats | [cap_06_io/](cap_06_io/README.md) |
 
 ## Chapter 1 — Built-ins (`cap_03_built-in/`)
 
@@ -51,6 +52,17 @@ cap_05_pandas/
 ├── 4-essential-functionality.py   # reindex, drop, indexing/filtering, arithmetic & alignment (5.2)
 ├── 5-function-sorting-ranking.py  # apply/map, sort_index/sort_values, rank, duplicate labels (5.2)
 └── 6-descriptive-statistics.py    # reductions, describe, corr/cov/corrwith, unique/counts    (5.3)
+```
+
+## Chapter 6 — data loading (`cap_06_io/`)
+
+```
+cap_06_io/
+├── 1-reading-writing-text.py  # read_csv options, nrows/chunksize, to_csv, csv module (6.1)
+├── 2-json-xml-html.py         # JSON, read_html, read_xml                             (6.1)
+├── 3-binary-formats.py        # pickle, Excel, HDF5                                   (6.2)
+├── 4-web-apis.py              # GitHub-issues requests example (offline)             (6.3)
+└── 5-databases.py             # SQLite via sqlite3, then SQLAlchemy + read_sql        (6.4)
 ```
 
 ## Running an exercise file
