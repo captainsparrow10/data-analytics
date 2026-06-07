@@ -17,6 +17,7 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 | 3 | Getting Started with pandas | [cap_05_pandas/](cap_05_pandas/README.md) |
 | 6 | Data Loading, Storage, and File Formats | [cap_06_io/](cap_06_io/README.md) |
 | 7 | Data Cleaning and Preparation | [cap_07_cleaning/](cap_07_cleaning/README.md) |
+| 8 | Data Wrangling: Join, Combine, and Reshape | [cap_08_wrangling/](cap_08_wrangling/README.md) |
 
 ## Chapter 1 — Built-ins (`cap_03_built-in/`)
 
@@ -76,6 +77,16 @@ cap_07_cleaning/
 ├── 4-extension-data-types.py                        # Int64/string/boolean, pd.NA, Arrow (7.3)
 ├── 5-string-manipulation.py                         # built-ins, re module, .str accessor (7.4)
 └── 6-categorical-data.py                            # Categorical, codes/categories, .cat (7.5)
+```
+
+## Chapter 8 — data wrangling (`cap_08_wrangling/`)
+
+```
+cap_08_wrangling/
+├── 1-hierarchical-indexing.py     # MultiIndex, unstack/stack, swaplevel, set_index/reset_index (8.1)
+├── 2-merge-and-join.py            # pd.merge (on/how/keys/suffixes), merge on index, join        (8.2)
+├── 3-concatenate-and-combine.py   # np.concatenate vs pd.concat, combine_first                   (8.2)
+└── 4-reshaping-pivoting.py        # stack/unstack, pivot (long→wide), melt (wide→long)           (8.3)
 ```
 
 ## Running an exercise file
