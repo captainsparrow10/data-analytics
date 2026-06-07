@@ -16,6 +16,7 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 | 2 | NumPy Basics: Arrays and Vectorized Computation | [cap_04_numpy/](cap_04_numpy/README.md) |
 | 3 | Getting Started with pandas | [cap_05_pandas/](cap_05_pandas/README.md) |
 | 6 | Data Loading, Storage, and File Formats | [cap_06_io/](cap_06_io/README.md) |
+| 7 | Data Cleaning and Preparation | [cap_07_cleaning/](cap_07_cleaning/README.md) |
 
 ## Chapter 1 — Built-ins (`cap_03_built-in/`)
 
@@ -63,6 +64,18 @@ cap_06_io/
 ├── 3-binary-formats.py        # pickle, Excel, HDF5                                   (6.2)
 ├── 4-web-apis.py              # GitHub-issues requests example (offline)             (6.3)
 └── 5-databases.py             # SQLite via sqlite3, then SQLAlchemy + read_sql        (6.4)
+```
+
+## Chapter 7 — data cleaning (`cap_07_cleaning/`)
+
+```
+cap_07_cleaning/
+├── 1-handling-missing-data.py                       # isna/notna, dropna, fillna/ffill   (7.1)
+├── 2-data-transformation.py                         # duplicates, map, replace, rename   (7.2)
+├── 3-discretization-outliers-sampling-dummies.py    # cut/qcut, outliers, sample, dummies(7.2)
+├── 4-extension-data-types.py                        # Int64/string/boolean, pd.NA, Arrow (7.3)
+├── 5-string-manipulation.py                         # built-ins, re module, .str accessor (7.4)
+└── 6-categorical-data.py                            # Categorical, codes/categories, .cat (7.5)
 ```
 
 ## Running an exercise file
