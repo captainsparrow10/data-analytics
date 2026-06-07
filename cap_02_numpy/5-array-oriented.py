@@ -1,5 +1,5 @@
 """
-Array-Oriented Programming & File I/O (Sections 4.4 and 4.5)
+Array-Oriented Programming with Arrays (Section 4.4)
 
 Using NumPy arrays lets you express many data-processing tasks as concise array
 expressions that would otherwise need explicit loops. Replacing loops with array
@@ -11,8 +11,6 @@ Python equivalent. This file covers the array-oriented toolkit:
   * Methods for Boolean arrays (counting, any, all).
   * Sorting (in place and copying).
   * Unique values and other set logic.
-
-It also covers Section 4.5 — saving and loading arrays in NumPy's binary format.
 
 BASIC ARRAY STATISTICAL METHODS
 sum            Sum of all elements, or along an axis (empty arrays sum to 0)
@@ -32,11 +30,8 @@ setdiff1d(x, y)    Set difference: elements in x that are not in y
 setxor1d(x, y)     Symmetric difference: elements in either array but not both
 
 Run:
-    python3 cap_02_numpy/4-array-oriented.py
+    python3 cap_02_numpy/5-array-oriented.py
 """
-
-import os
-import tempfile
 
 import numpy as np
 
@@ -155,41 +150,12 @@ def explain_unique_and_set_logic() -> None:
     print(np.isin(values, [2, 3, 6]))
 
 
-def explain_file_io() -> None:
-    """
-    Problem: persist arrays to disk and load them back.
-    Why: np.save/np.load use NumPy's binary .npy format; np.savez stores several
-    arrays in one .npz archive, loaded lazily by name. We use a temporary
-    directory and clean up so the example stays runnable and leaves no files.
-    """
-    print("== File input and output with arrays ==")
-
-    arr = np.arange(10)
-    with tempfile.TemporaryDirectory() as tmp:
-        # np.save writes a single array; the .npy extension is appended if absent.
-        single_path = os.path.join(tmp, "some_array")
-        np.save(single_path, arr)
-        print(np.load(single_path + ".npy"))
-
-        # np.savez stores multiple arrays as keyword arguments in one archive.
-        archive_path = os.path.join(tmp, "array_archive.npz")
-        np.savez(archive_path, a=arr, b=arr)
-        loaded = np.load(archive_path)
-        print(loaded["b"])  # arrays are loaded lazily, accessed by their name
-
-        # For data that compresses well, savez_compressed produces a smaller file.
-        compressed_path = os.path.join(tmp, "arrays_compressed.npz")
-        np.savez_compressed(compressed_path, a=arr, b=arr)
-        print(os.path.exists(compressed_path))  # True
-
-
 def main() -> None:
     explain_where()
     explain_math_and_stats()
     explain_boolean_array_methods()
     explain_sorting()
     explain_unique_and_set_logic()
-    explain_file_io()
 
 
 main()
