@@ -12,14 +12,14 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 
 | # | Chapter | Index |
 |---|---------|-------|
-| 1 | Python Built-ins | [cap_01_built-in/](cap_01_built-in/README.md) |
-| 2 | NumPy Basics: Arrays and Vectorized Computation | [cap_02_numpy/](cap_02_numpy/README.md) |
-| 3 | Getting Started with pandas | [cap_03_panda/](cap_03_panda/README.md) |
+| 1 | Python Built-ins | [cap_03_built-in/](cap_03_built-in/README.md) |
+| 2 | NumPy Basics: Arrays and Vectorized Computation | [cap_04_numpy/](cap_04_numpy/README.md) |
+| 3 | Getting Started with pandas | [cap_05_pandas/](cap_05_pandas/README.md) |
 
-## Chapter 1 — Built-ins (`cap_01_built-in/`)
+## Chapter 1 — Built-ins (`cap_03_built-in/`)
 
 ```
-cap_01_built-in/
+cap_03_built-in/
 ├── data-structures/
 │   ├── 1-tupple.py            # tuples            (25 exercises)
 │   ├── 2-list.py              # lists             (45 exercises)
@@ -41,10 +41,10 @@ cap_01_built-in/
     └── 2-random.py            # random / secrets    (10 exercises)
 ```
 
-## Chapter 3 — pandas (`cap_03_panda/`)
+## Chapter 3 — pandas (`cap_05_pandas/`)
 
 ```
-cap_03_panda/
+cap_05_pandas/
 ├── 1-series.py                    # Series: creation, index, selection, dict interop, name   (5.1)
 ├── 2-dataframe.py                 # DataFrame: construction, loc/iloc, del, .T, to_numpy      (5.1)
 ├── 3-index-objects.py             # Index: immutability, set logic, duplicates, methods       (5.1)
@@ -58,7 +58,7 @@ cap_03_panda/
 Each file runs end to end and prints the result of every exercise:
 
 ```bash
-python3 cap_01_built-in/data-structures/3-set.py
+python3 cap_03_built-in/data-structures/3-set.py
 ```
 
 ## Conventions (read this before editing)
@@ -139,7 +139,7 @@ poetry install                                      # runtime + dev dependencies
 Everyday use — run anything inside the environment with `poetry run`:
 
 ```bash
-poetry run python cap_02_numpy/1-ndarray-basics.py  # run an exercise file
+poetry run python cap_04_numpy/1-ndarray-basics.py  # run an exercise file
 poetry shell                                        # or drop into the venv
 ```
 
@@ -163,5 +163,5 @@ in-project `.venv` so third-party types resolve). Every file is kept at **0 erro
 
 ```bash
 poetry run pyright                # whole project
-poetry run pyright cap_02_numpy   # a single chapter
+poetry run pyright cap_04_numpy   # a single chapter
 ```

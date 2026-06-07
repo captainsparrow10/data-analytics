@@ -14,7 +14,7 @@ The examples below write to a temporary directory and clean it up automatically,
 so the file stays runnable and leaves nothing behind in the repository.
 
 Run:
-    python3 cap_02_numpy/6-file-io.py
+    python3 cap_04_numpy/6-file-io.py
 """
 
 import os

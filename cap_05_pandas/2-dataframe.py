@@ -23,7 +23,7 @@ T                  Transpose: swap rows and columns
 to_numpy           Return the data as a two-dimensional ndarray
 
 Run:
-    poetry run python cap_03_panda/2-dataframe.py
+    poetry run python cap_05_pandas/2-dataframe.py
 """
 
 import numpy as np

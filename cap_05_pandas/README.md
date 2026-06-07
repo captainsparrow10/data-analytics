@@ -29,7 +29,7 @@ The full chapter, in strict book order (5.1 → 5.3), one file per sub-section:
 ## Running
 
 ```bash
-poetry run python cap_03_panda/1-series.py   # runs every exercise in the file
+poetry run python cap_05_pandas/1-series.py   # runs every exercise in the file
 ```
 
 ## pandas 3.0 / NumPy 2.x notes
@@ -43,5 +43,5 @@ and NumPy **2.4.6**:
 - Copy-on-Write is the default → assignments go through `.loc[...] = ...`.
 
 pandas comes from the project's Poetry dependencies. See the [project README](../README.md)
-for setup and conventions, and [Chapter 2](../cap_02_numpy/README.md) for the established
+for setup and conventions, and [Chapter 2](../cap_04_numpy/README.md) for the established
 exercise pattern.

@@ -18,7 +18,7 @@ first      Assign ranks in the order the values appear in the data
 dense      Like "min", but ranks increase by 1 between groups (no gaps)
 
 Run:
-    poetry run python cap_03_panda/5-function-sorting-ranking.py
+    poetry run python cap_05_pandas/5-function-sorting-ranking.py
 """
 
 import numpy as np

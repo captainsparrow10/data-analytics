@@ -29,7 +29,7 @@ full_like     Take another array and produce a filled array of the same shape an
 eye, identity Create a square N x N identity matrix (1s on the diagonal, 0s elsewhere)
 
 Run:
-    python3 cap_02_numpy/1-ndarray-basics.py
+    python3 cap_04_numpy/1-ndarray-basics.py
 """
 
 import numpy as np

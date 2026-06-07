@@ -29,9 +29,9 @@ The full chapter, in strict book order (4.1 → 4.7), one file per sub-section:
 ## Running
 
 ```bash
-python3 cap_02_numpy/1-ndarray-basics.py   # runs every exercise in the file
+python3 cap_04_numpy/1-ndarray-basics.py   # runs every exercise in the file
 ```
 
 NumPy comes from the project's Poetry dependencies (installed automatically by the
 devcontainer). See the [project README](../README.md) for setup and conventions, and
-[Chapter 1](../cap_01_built-in/README.md) for the established exercise pattern.
+[Chapter 1](../cap_03_built-in/README.md) for the established exercise pattern.

@@ -50,7 +50,7 @@ Exercises adapted from [PYnative](https://pynative.com/). **373 exercises** acro
 ## Running
 
 ```bash
-python3 cap_01_built-in/data-structures/3-set.py   # runs every exercise in the file
+python3 cap_03_built-in/data-structures/3-set.py   # runs every exercise in the file
 ```
 
 Each file is kept at 0 pyright-strict errors. See the [project README](../README.md)

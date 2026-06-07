@@ -23,7 +23,7 @@ df.loc[rows, cols] Select by label (endpoint inclusive for slices)
 df.iloc[rows, cols] Select by integer position (endpoint exclusive)
 
 Run:
-    poetry run python cap_03_panda/4-essential-functionality.py
+    poetry run python cap_05_pandas/4-essential-functionality.py
 """
 
 import numpy as np

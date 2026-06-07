@@ -27,7 +27,7 @@ isin           Boolean membership test over a collection
 get_indexer    Integer indices mapping values into an array of distinct values
 
 Run:
-    poetry run python cap_03_panda/6-descriptive-statistics.py
+    poetry run python cap_05_pandas/6-descriptive-statistics.py
 """
 
 import numpy as np

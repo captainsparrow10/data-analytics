@@ -31,7 +31,7 @@ pyright = ">=1.1.410"
 # Strict type checking travels with the repo so the editor (Pylance) and any CI
 # enforce the same rules. Every chapter folder is kept at 0 errors. venvPath/venv
 # point pyright at the in-project Poetry virtualenv so third-party types resolve.
-include = ["cap_01_built-in", "cap_02_numpy", "cap_03_panda"]
+include = ["cap_03_built-in", "cap_04_numpy", "cap_05_pandas"]
 venvPath = "."
 venv = ".venv"
 typeCheckingMode = "strict"
@@ -39,10 +39,10 @@ pythonVersion = "3.11"
 
 # pandas ships incomplete type stubs, so strict mode floods pandas-heavy code with
 # "unknown type" noise that would force unreadable casts into teaching examples.
-# For cap_03_panda only, silence those specific stub-driven rules — real type errors
-# (bad arguments, wrong attributes) are still reported. cap_01/cap_02 stay fully strict.
+# For cap_05_pandas only, silence those specific stub-driven rules — real type errors
+# (bad arguments, wrong attributes) are still reported. Other folders stay fully strict.
 [[tool.pyright.executionEnvironments]]
-root = "cap_03_panda"
+root = "cap_05_pandas"
 reportMissingTypeStubs = "none"
 reportUnknownMemberType = "none"
 reportUnknownArgumentType = "none"

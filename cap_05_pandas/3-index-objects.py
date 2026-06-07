@@ -26,7 +26,7 @@ unique             The array of unique values in the Index
 is_unique          True if the Index has no duplicate labels
 
 Run:
-    poetry run python cap_03_panda/3-index-objects.py
+    poetry run python cap_05_pandas/3-index-objects.py
 """
 
 import numpy as np

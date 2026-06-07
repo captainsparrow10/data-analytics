@@ -30,7 +30,7 @@ setdiff1d(x, y)    Set difference: elements in x that are not in y
 setxor1d(x, y)     Symmetric difference: elements in either array but not both
 
 Run:
-    python3 cap_02_numpy/5-array-oriented.py
+    python3 cap_04_numpy/5-array-oriented.py
 """
 
 import numpy as np

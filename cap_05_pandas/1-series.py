@@ -23,7 +23,7 @@ to_dict            Convert the Series back into a plain Python dictionary
 name               Optional name for the Series; index.name names the labels
 
 Run:
-    poetry run python cap_03_panda/1-series.py
+    poetry run python cap_05_pandas/1-series.py
 """
 
 import numpy as np

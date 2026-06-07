@@ -23,7 +23,7 @@ solve   Solve the linear system Ax = b for x (A square)
 lstsq   Least-squares solution to Ax = b
 
 Run:
-    python3 cap_02_numpy/5-linear-algebra.py
+    python3 cap_04_numpy/5-linear-algebra.py
 """
 
 import numpy as np

@@ -10,7 +10,7 @@ flips (0/1) with the numpy.random generator (see Section 4.2), turn them into
 steps (-1/+1) with np.where, and accumulate them with cumsum.
 
 Run:
-    python3 cap_02_numpy/8-random-walks.py
+    python3 cap_04_numpy/8-random-walks.py
 """
 
 import numpy as np
