@@ -18,6 +18,7 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 | 6 | Data Loading, Storage, and File Formats | [cap_06_io/](cap_06_io/README.md) |
 | 7 | Data Cleaning and Preparation | [cap_07_cleaning/](cap_07_cleaning/README.md) |
 | 8 | Data Wrangling: Join, Combine, and Reshape | [cap_08_wrangling/](cap_08_wrangling/README.md) |
+| 9 | Plotting and Visualization | [cap_09_plotting/](cap_09_plotting/README.md) |
 
 ## Chapter 1 — Built-ins (`cap_03_built-in/`)
 
@@ -88,6 +89,16 @@ cap_08_wrangling/
 ├── 3-concatenate-and-combine.py   # np.concatenate vs pd.concat, combine_first                   (8.2)
 └── 4-reshaping-pivoting.py        # stack/unstack, pivot (long→wide), melt (wide→long)           (8.3)
 ```
+
+## Chapter 9 — plotting (`cap_09_plotting/`)
+
+```
+cap_09_plotting/
+├── 1-matplotlib-primer.py   # figures/subplots, spacing, colors/markers/styles, ticks/labels/legends, annotations & patches, savefig, plt.rc (9.1)
+└── 2-pandas-seaborn.py      # line/bar (grouped, stacked, seaborn.barplot), hist/density/histplot, regplot/pairplot, catplot facet grids        (9.2)
+```
+
+> Headless: figures are saved into a temp dir (never shown), and nothing is left in the repo.
 
 ## Running an exercise file
 
