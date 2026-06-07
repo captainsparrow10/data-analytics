@@ -21,6 +21,7 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 | 9 | Plotting and Visualization | [cap_09_plotting/](cap_09_plotting/README.md) |
 | 10 | Data Aggregation and Group Operations | [cap_10_groupby/](cap_10_groupby/README.md) |
 | 11 | Time Series | [cap_11_timeseries/](cap_11_timeseries/README.md) |
+| 12 | Introduction to Modeling Libraries | [cap_12_modeling/](cap_12_modeling/README.md) |
 
 ## Chapter 1 — Built-ins (`cap_03_built-in/`)
 
@@ -125,6 +126,18 @@ cap_11_timeseries/
 ├── 6-resampling.py                         # resample, downsampling (OHLC, closed/label), upsampling (ffill), pd.Grouper     (11.6)
 └── 7-moving-window-functions.py            # rolling (min_periods, offset), expanding, ewm, rolling corr, rolling().apply    (11.7)
 ```
+
+## Chapter 12 — modeling libraries (`cap_12_modeling/`)
+
+```
+cap_12_modeling/
+├── 1-pandas-model-interface.py  # pandas <-> models: to_numpy, column subsets, get_dummies design matrix          (12.1)
+├── 2-patsy-formulas.py          # Patsy: dmatrices, no-intercept, standardize/center/I(), C() & interactions       (12.2)
+├── 3-statsmodels.py             # statsmodels: OLS (array & formula APIs), summary/params/tvalues, AR via AutoReg   (12.3)
+└── 4-scikit-learn.py            # scikit-learn: impute, encode, LogisticRegression(CV), cross_val_score (Titanic)  (12.4)
+```
+
+> Self-contained: the Titanic example synthesizes a Titanic-like frame in code (no CSV/network).
 
 ## Running an exercise file
 
