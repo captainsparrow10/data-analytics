@@ -22,6 +22,7 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 | 10 | Data Aggregation and Group Operations | [cap_10_groupby/](cap_10_groupby/README.md) |
 | 11 | Time Series | [cap_11_timeseries/](cap_11_timeseries/README.md) |
 | 12 | Introduction to Modeling Libraries | [cap_12_modeling/](cap_12_modeling/README.md) |
+| 13 | Data Analysis Examples | [cap_13_examples/](cap_13_examples/README.md) |
 
 ## Chapter 1 — Built-ins (`cap_03_built-in/`)
 
@@ -138,6 +139,22 @@ cap_12_modeling/
 ```
 
 > Self-contained: the Titanic example synthesizes a Titanic-like frame in code (no CSV/network).
+
+## Chapter 13 — data analysis examples (`cap_13_examples/`)
+
+```
+cap_13_examples/
+├── 1-bitly-usagov.py   # count time zones (pure Python + pandas), agent field, Windows split   (13.1)
+├── 2-movielens.py      # merge three tables, mean rating by gender, rating disagreement         (13.2)
+├── 3-baby-names.py     # concat per-year files, prop, top-1000, diversity, last-letter, Lesley  (13.3)
+├── 4-usda-food.py      # normalize nested nutrient JSON, median by food group, max per nutrient  (13.4)
+└── 5-fec-campaign.py   # party mapping, donations by occupation/state, cut buckets (large CSV)   (13.5)
+```
+
+> Unlike the other chapters, Chapter 13 analyzes the book's **real datasets**. Each file
+> downloads what it needs on first run into `cap_13_examples/datasets/` (git-ignored); the
+> large FEC CSV is streamed with a size cap. Offline, every analysis prints a download hint
+> and the file still exits 0.
 
 ## Running an exercise file
 
