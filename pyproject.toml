@@ -24,6 +24,7 @@ dependencies = [
     "sqlalchemy (>=2.0.50,<3.0.0)",
     "pyarrow (>=24.0.0,<25.0.0)",
     "seaborn (>=0.13.2,<0.14.0)",
+    "patsy (>=1.0.2,<2.0.0)",
 ]
 
 [tool.poetry]
@@ -39,7 +40,7 @@ pyright = ">=1.1.410"
 # enforce the same rules. Every chapter folder is kept at 0 errors. venvPath/venv
 # point pyright at the in-project Poetry virtualenv so third-party types resolve.
 # Each chapter folder is added here as it is created.
-include = ["cap_03_built-in", "cap_04_numpy", "cap_05_pandas", "cap_06_io", "cap_07_cleaning", "cap_08_wrangling", "cap_09_plotting", "cap_10_groupby", "cap_11_timeseries"]
+include = ["cap_03_built-in", "cap_04_numpy", "cap_05_pandas", "cap_06_io", "cap_07_cleaning", "cap_08_wrangling", "cap_09_plotting", "cap_10_groupby", "cap_11_timeseries", "cap_12_modeling"]
 venvPath = "."
 venv = ".venv"
 typeCheckingMode = "strict"
