@@ -17,6 +17,11 @@ dependencies = [
     "scikit-learn>=1.9.0,<2",
     "statsmodels>=0.14.6,<1",
     "psycopg2-binary>=2.9.12,<3",
+    "openpyxl (>=3.1.5,<4.0.0)",
+    "lxml (>=6.1.1,<7.0.0)",
+    "html5lib (>=1.1,<2.0)",
+    "tables (>=3.11.1,<4.0.0)",
+    "sqlalchemy (>=2.0.50,<3.0.0)",
 ]
 
 [tool.poetry]
@@ -31,20 +36,37 @@ pyright = ">=1.1.410"
 # Strict type checking travels with the repo so the editor (Pylance) and any CI
 # enforce the same rules. Every chapter folder is kept at 0 errors. venvPath/venv
 # point pyright at the in-project Poetry virtualenv so third-party types resolve.
-include = ["cap_03_built-in", "cap_04_numpy", "cap_05_pandas"]
+# Each chapter folder is added here as it is created.
+include = ["cap_03_built-in", "cap_04_numpy", "cap_05_pandas", "cap_06_io"]
 venvPath = "."
 venv = ".venv"
 typeCheckingMode = "strict"
 pythonVersion = "3.11"
 
-# pandas ships incomplete type stubs, so strict mode floods pandas-heavy code with
-# "unknown type" noise that would force unreadable casts into teaching examples.
-# For cap_05_pandas only, silence those specific stub-driven rules — real type errors
-# (bad arguments, wrong attributes) are still reported. Other folders stay fully strict.
-[[tool.pyright.executionEnvironments]]
-root = "cap_05_pandas"
+# pandas/seaborn/etc. ship incomplete type stubs, so strict mode floods data-stack
+# code with "unknown type" noise that would force unreadable casts into the teaching
+# examples. Silence those stub-driven rules repo-wide (real type errors — bad
+# arguments, wrong attributes — are still reported)...
 reportMissingTypeStubs = "none"
 reportUnknownMemberType = "none"
 reportUnknownArgumentType = "none"
 reportUnknownVariableType = "none"
 reportUnknownLambdaType = "none"
+
+# ...then RE-ENABLE full strictness for the two chapters whose dependencies are fully
+# typed (built-ins and NumPy), so they stay a 0-unknown showcase.
+[[tool.pyright.executionEnvironments]]
+root = "cap_03_built-in"
+reportMissingTypeStubs = "error"
+reportUnknownMemberType = "error"
+reportUnknownArgumentType = "error"
+reportUnknownVariableType = "error"
+reportUnknownLambdaType = "error"
+
+[[tool.pyright.executionEnvironments]]
+root = "cap_04_numpy"
+reportMissingTypeStubs = "error"
+reportUnknownMemberType = "error"
+reportUnknownArgumentType = "error"
+reportUnknownVariableType = "error"
+reportUnknownLambdaType = "error"
