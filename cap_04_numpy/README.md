@@ -25,6 +25,7 @@ The full chapter, in strict book order (4.1 → 4.7), one file per sub-section:
 | `6-file-io.py` | Saving/loading arrays (`save`, `load`, `savez`) | 4.5 | ✅ done |
 | `7-linear-algebra.py` | `dot`, `@`, matrix ops, `numpy.linalg` | 4.6 | ✅ done |
 | `8-random-walks.py` | The random-walk example (single + many) | 4.7 | ✅ done |
+| `exercises.py` | Practice exercises | — | ✅ done |
 
 ## Running
 

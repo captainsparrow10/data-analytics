@@ -27,6 +27,7 @@ The full chapter, in strict book order (9.1 → 9.2), one file per section:
 |------|-------|--------------|--------|
 | `1-matplotlib-primer.py` | Figures & subplots, `subplots_adjust`, colors/markers/line styles, ticks/labels/legends, annotations & patches, `savefig`, `plt.rc` | 9.1 | ✅ done |
 | `2-pandas-seaborn.py` | Line plots, bar plots (grouped/stacked/`seaborn.barplot`), histograms & density (`plot.hist`/`plot.density`/`histplot`), scatter/point (`regplot`/`pairplot`), facet grids (`catplot`) | 9.2 | ✅ done |
+| `exercises.py` | Practice exercises | 9.1–9.2 | ✅ done |
 
 ## Running
 

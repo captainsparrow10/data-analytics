@@ -25,6 +25,7 @@ The full chapter, in strict book order (5.1 → 5.3), one file per sub-section:
 | `4-essential-functionality.py` | Reindex, drop, indexing/filtering, arithmetic & alignment | 5.2 | ✅ done |
 | `5-function-sorting-ranking.py` | `apply`/`map`, `sort_index`/`sort_values`, `rank`, duplicate labels | 5.2 | ✅ done |
 | `6-descriptive-statistics.py` | Reductions, `describe`, `corr`/`cov`/`corrwith`, unique/counts/membership | 5.3 | ✅ done |
+| `exercises.py` | Practice exercises | — | ✅ done |
 
 ## Running
 
