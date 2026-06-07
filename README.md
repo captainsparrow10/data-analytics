@@ -23,8 +23,9 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 | 11 | Time Series | [cap_11_timeseries/](cap_11_timeseries/README.md) |
 | 12 | Introduction to Modeling Libraries | [cap_12_modeling/](cap_12_modeling/README.md) |
 | 13 | Data Analysis Examples | [cap_13_examples/](cap_13_examples/README.md) |
+| A | Advanced NumPy (appendix) | [cap_a_advanced-numpy/](cap_a_advanced-numpy/README.md) |
 
-## Chapter 1 — Built-ins (`cap_03_built-in/`)
+## Chapter 3 — Built-ins (`cap_03_built-in/`)
 
 ```
 cap_03_built-in/
@@ -49,7 +50,7 @@ cap_03_built-in/
     └── 2-random.py            # random / secrets    (10 exercises)
 ```
 
-## Chapter 3 — pandas (`cap_05_pandas/`)
+## Chapter 5 — pandas (`cap_05_pandas/`)
 
 ```
 cap_05_pandas/
