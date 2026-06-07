@@ -40,7 +40,7 @@ pyright = ">=1.1.410"
 # enforce the same rules. Every chapter folder is kept at 0 errors. venvPath/venv
 # point pyright at the in-project Poetry virtualenv so third-party types resolve.
 # Each chapter folder is added here as it is created.
-include = ["cap_03_built-in", "cap_04_numpy", "cap_05_pandas", "cap_06_io", "cap_07_cleaning", "cap_08_wrangling", "cap_09_plotting", "cap_10_groupby", "cap_11_timeseries", "cap_12_modeling"]
+include = ["cap_03_built-in", "cap_04_numpy", "cap_05_pandas", "cap_06_io", "cap_07_cleaning", "cap_08_wrangling", "cap_09_plotting", "cap_10_groupby", "cap_11_timeseries", "cap_12_modeling", "cap_13_examples"]
 venvPath = "."
 venv = ".venv"
 typeCheckingMode = "strict"

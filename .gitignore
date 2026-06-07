@@ -15,3 +15,7 @@ venv/
 
 # Books / reference PDFs (no versionar binarios pesados)
 *.pdf
+
+# Chapter 13 downloads the book's real datasets on first run into this cache;
+# never commit the downloaded data (some files are very large, e.g. the FEC CSV).
+cap_13_examples/datasets/
