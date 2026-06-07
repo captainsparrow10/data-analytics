@@ -1,30 +1,50 @@
-[tool.poetry]
+# PEP 621 project metadata (the modern standard Poetry 2.x recommends over the
+# deprecated [tool.poetry] metadata keys).
+[project]
 name = "data-analytics-book"
 version = "0.1.0"
-description = "Entorno para libro de Data Analysis"
-authors = ["Sparrow <javier1009rm@gmail.com>"]
+description = "Study workspace for the book 'Python for Data Analysis' (Wes McKinney)"
+authors = [{ name = "Sparrow", email = "javier1009rm@gmail.com" }]
 readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "numpy>=2.4.6,<3",
+    "pandas>=3.0.3,<4",
+    "matplotlib>=3.10.9,<4",
+    "ipython>=9.14.1,<10",
+    "jupyter>=1.1.1,<2",
+    "scipy>=1.17.1,<2",
+    "scikit-learn>=1.9.0,<2",
+    "statsmodels>=0.14.6,<1",
+    "psycopg2-binary>=2.9.12,<3",
+]
 
-[tool.poetry.dependencies]
-python = "^3.11"
-# Aquí puedes dejarlo vacío por ahora, luego añadirás cosas con 'poetry add'
-numpy = "^2.4.6"
-pandas = "^3.0.3"
-matplotlib = "^3.10.9"
-ipython = "^9.14.1"
-jupyter = "^1.1.1"
-scipy = "^1.17.1"
-scikit-learn = "^1.9.0"
-statsmodels = "^0.14.6"
-psycopg2-binary = "^2.9.12"
+[tool.poetry]
+# Study workspace, not an installable package — Poetry manages dependencies only.
+package-mode = false
+
+# Development-only tools (installed with `poetry install`, excluded from runtime).
+[tool.poetry.group.dev.dependencies]
+pyright = ">=1.1.410"
 
 [tool.pyright]
 # Strict type checking travels with the repo so the editor (Pylance) and any CI
-# enforce the same rules. Every file under cap_01_built-in is kept at 0 errors.
-include = ["cap_01_built-in"]
+# enforce the same rules. Every chapter folder is kept at 0 errors. venvPath/venv
+# point pyright at the in-project Poetry virtualenv so third-party types resolve.
+include = ["cap_01_built-in", "cap_02_numpy", "cap_03_panda"]
+venvPath = "."
+venv = ".venv"
 typeCheckingMode = "strict"
 pythonVersion = "3.11"
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+# pandas ships incomplete type stubs, so strict mode floods pandas-heavy code with
+# "unknown type" noise that would force unreadable casts into teaching examples.
+# For cap_03_panda only, silence those specific stub-driven rules — real type errors
+# (bad arguments, wrong attributes) are still reported. cap_01/cap_02 stay fully strict.
+[[tool.pyright.executionEnvironments]]
+root = "cap_03_panda"
+reportMissingTypeStubs = "none"
+reportUnknownMemberType = "none"
+reportUnknownArgumentType = "none"
+reportUnknownVariableType = "none"
+reportUnknownLambdaType = "none"
