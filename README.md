@@ -20,6 +20,7 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 | 8 | Data Wrangling: Join, Combine, and Reshape | [cap_08_wrangling/](cap_08_wrangling/README.md) |
 | 9 | Plotting and Visualization | [cap_09_plotting/](cap_09_plotting/README.md) |
 | 10 | Data Aggregation and Group Operations | [cap_10_groupby/](cap_10_groupby/README.md) |
+| 11 | Time Series | [cap_11_timeseries/](cap_11_timeseries/README.md) |
 
 ## Chapter 1 — Built-ins (`cap_03_built-in/`)
 
@@ -110,6 +111,19 @@ cap_10_groupby/
 ├── 3-apply-split-apply-combine.py    # general apply, group_keys=False, cut/qcut buckets, fill NA, sampling, wavg/corr, group-wise OLS (10.3)
 ├── 4-group-transforms.py             # transform (broadcast & same-shape), normalization, "unwrapped" group operations                (10.4)
 └── 5-pivot-tables-crosstab.py        # pivot_table (margins, aggfunc, fill_value) and pd.crosstab                                      (10.5)
+```
+
+## Chapter 11 — time series (`cap_11_timeseries/`)
+
+```
+cap_11_timeseries/
+├── 1-date-time-types.py                    # datetime/timedelta, strftime/strptime, dateutil.parse, to_datetime, NaT          (11.1)
+├── 2-time-series-basics.py                 # timestamp-indexed Series, string/datetime selection & slicing, truncate, dups    (11.2)
+├── 3-date-ranges-frequencies-shifting.py   # date_range, offsets (1h30min, WOM-3FRI), shift, rollforward/rollback            (11.3)
+├── 4-time-zone-handling.py                 # tz_localize/tz_convert, zoneinfo, tz-aware Timestamp, ops between zones          (11.4)
+├── 5-periods.py                            # Period/period_range, asfreq, quarterly freqs, to_period/to_timestamp            (11.5)
+├── 6-resampling.py                         # resample, downsampling (OHLC, closed/label), upsampling (ffill), pd.Grouper     (11.6)
+└── 7-moving-window-functions.py            # rolling (min_periods, offset), expanding, ewm, rolling corr, rolling().apply    (11.7)
 ```
 
 ## Running an exercise file
