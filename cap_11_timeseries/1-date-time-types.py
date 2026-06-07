@@ -110,7 +110,7 @@ def explain_pandas_to_datetime() -> None:
 
     datestrs = ["2011-07-06 12:00:00", "2011-08-06 00:00:00"]
     idx = pd.to_datetime(datestrs)
-    print(idx)                       # DatetimeIndex([...], dtype='datetime64[ns]')
+    print(idx)                       # DatetimeIndex([...], dtype='datetime64[us]')
 
     # Missing-like values become NaT, the timestamp null.
     idx_with_na = pd.to_datetime(datestrs + [None])

@@ -73,8 +73,8 @@ def explain_pivot_table_basics() -> None:
     print(tips.head())
 
     # Group means arranged by day and smoker on the rows. The book aggregates all
-    # numeric columns; pandas 3.0 would try to average the string `time` column
-    # too, so we name the numeric `values` explicitly (the same set the book shows).
+    # numeric columns; pandas 3.0 raises a TypeError when aggregating non-numeric
+    # columns, so we name the numeric `values` explicitly (the same set the book shows).
     print(
         tips.pivot_table(
             index=["day", "smoker"], values=["size", "tip", "tip_pct", "total_bill"]

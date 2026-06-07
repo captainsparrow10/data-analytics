@@ -47,5 +47,5 @@ and NumPy **2.4.6**:
 - Copy-on-Write is the default → assignments go through `.loc[...] = ...` where needed.
 
 pandas comes from the project's Poetry dependencies. See the [project README](../README.md)
-for setup and conventions, and [Chapter 3](../cap_05_pandas/README.md) for the established
+for setup and conventions, and [Chapter 5](../cap_05_pandas/README.md) for the established
 exercise pattern.

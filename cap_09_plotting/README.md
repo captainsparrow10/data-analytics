@@ -63,4 +63,4 @@ matplotlib **3.10.9**, seaborn **0.13.2**, pandas **3.0.3**, and NumPy **2.4.6**
   float-typed APIs.
 
 See the [project README](../README.md) for setup and conventions, and
-[Chapter 3](../cap_05_pandas/README.md) for the established exercise pattern.
+[Chapter 5](../cap_05_pandas/README.md) for the established exercise pattern.

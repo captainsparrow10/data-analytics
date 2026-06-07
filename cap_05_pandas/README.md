@@ -1,4 +1,4 @@
-# Chapter 3 — Getting Started with pandas
+# Chapter 5 — Getting Started with pandas
 
 pandas is the workhorse library for tabular and heterogeneous data in Python. Built on
 top of NumPy, it adds two labeled data structures — the one-dimensional `Series` and the
@@ -43,5 +43,5 @@ and NumPy **2.4.6**:
 - Copy-on-Write is the default → assignments go through `.loc[...] = ...`.
 
 pandas comes from the project's Poetry dependencies. See the [project README](../README.md)
-for setup and conventions, and [Chapter 2](../cap_04_numpy/README.md) for the established
+for setup and conventions, and [Chapter 4](../cap_04_numpy/README.md) for the established
 exercise pattern.

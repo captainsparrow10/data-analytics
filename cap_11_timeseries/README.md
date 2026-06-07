@@ -55,6 +55,8 @@ NumPy **2.4.6**:
 - `Period` with the business-day (`"B"`) frequency is deprecated → use calendar daily `"D"` for the
   quarterly fiscal-year computation (file 5).
 - Copy-on-Write is the default → index reassignments go through `obj.index = ...`.
+- Default timestamp resolution is **`us`** (microseconds) on pandas 3.0 — `DatetimeIndex` dtype
+  is `datetime64[us]` (or `datetime64[us, tz]`) rather than the older `datetime64[ns]` (files 1, 2, 4).
 
 pandas comes from the project's Poetry dependencies. See the [project README](../README.md) for
 setup and conventions, and [Chapter 5](../cap_05_pandas/README.md) for the established exercise

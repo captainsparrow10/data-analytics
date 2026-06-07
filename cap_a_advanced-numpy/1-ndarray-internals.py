@@ -1,17 +1,17 @@
 """
 ndarray Object Internals (Appendix A.1)
 
-The NumPy ndarray is a way to interpret a block of homogeneously typed data --
-either contiguous or strided -- as a multidimensional array object. What makes
+The NumPy ndarray is a way to interpret a block of homogeneously typed data —
+either contiguous or strided — as a multidimensional array object. What makes
 it flexible is that every array is a *strided view* on a block of memory: a view
 like arr[::2, ::-1] does not copy any data, it only changes the striding
 information. Internally an ndarray is more than a chunk of memory and a dtype;
 it consists of:
 
-  * A POINTER to data -- a block of memory in RAM or a memory-mapped file.
-  * The DTYPE -- describing fixed-size value cells in the array.
-  * A SHAPE tuple -- the size of each dimension.
-  * A STRIDES tuple -- bytes to "step" to advance one element along a dimension.
+  * A POINTER to data — a block of memory in RAM or a memory-mapped file.
+  * The DTYPE — describing fixed-size value cells in the array.
+  * A SHAPE tuple — the size of each dimension.
+  * A STRIDES tuple — bytes to "step" to advance one element along a dimension.
 
 This file also covers the NumPy data type hierarchy: dtypes have superclasses
 (np.integer, np.floating, ...) that np.issubdtype can test against, and the

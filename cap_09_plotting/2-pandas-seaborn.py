@@ -35,6 +35,7 @@ Run:
 
 import os
 import tempfile
+import warnings
 from pathlib import Path
 
 import matplotlib
@@ -315,7 +316,12 @@ def explain_facet_grids() -> None:
         plt.close("all")
 
         # catplot supports other kinds, e.g. box plots (median, quartiles, outliers).
-        g3 = sns.catplot(x="tip_pct", y="day", kind="box", data=tight)
+        # seaborn 0.13.2 passes `vert=` to matplotlib 3.10's boxplot, which emits a
+        # PendingDeprecationWarning. This is a seaborn/matplotlib version mismatch,
+        # not user code; suppress it so -W error mode passes cleanly.
+        with warnings.catch_warnings():
+            warnings.filterwarnings("ignore", category=PendingDeprecationWarning)
+            g3 = sns.catplot(x="tip_pct", y="day", kind="box", data=tight)
         g3.savefig(Path(tmp) / "catplot_box.png")
         print(f"saved catplot_box.png -> exists={(Path(tmp) / 'catplot_box.png').exists()}")
         plt.close("all")

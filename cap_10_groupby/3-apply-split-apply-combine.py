@@ -80,13 +80,13 @@ def explain_apply_basics() -> None:
     print(top(tips, n=6))
 
     # Grouped by smoker: top function runs on each group, results concatenated.
-    # (include_groups=False keeps the grouping column out of the applied frame,
-    # which pandas 3.0 expects; we re-select the column inside top regardless.)
-    print(tips.groupby("smoker")[tips.columns].apply(top, include_groups=False))
+    # include_groups=False already excludes the grouping column from the applied
+    # frame, so no need to select columns explicitly before apply.
+    print(tips.groupby("smoker").apply(top, include_groups=False))
 
     # Passing extra keyword/positional args after the function.
     print(
-        tips.groupby(["smoker", "day"])[tips.columns].apply(
+        tips.groupby(["smoker", "day"]).apply(
             top, n=1, column="total_bill", include_groups=False
         )
     )
@@ -124,7 +124,7 @@ def explain_suppressing_group_keys() -> None:
         return result
 
     print(
-        tips.groupby("smoker", group_keys=False)[tips.columns].apply(
+        tips.groupby("smoker", group_keys=False).apply(
             top, include_groups=False
         )
     )

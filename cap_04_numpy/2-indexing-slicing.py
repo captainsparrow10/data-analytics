@@ -14,7 +14,7 @@ A key distinction from Python lists: basic slices return *views*, not copies.
 Boolean and fancy indexing, by contrast, always *copy* the selected data.
 
 Run:
-    python3 cap_04_numpy/2-indexing-slicing.py
+    poetry run python cap_04_numpy/2-indexing-slicing.py
 """
 
 import numpy as np

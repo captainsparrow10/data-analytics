@@ -6,7 +6,7 @@ timestamps — often represented outside pandas as Python strings or `datetime`
 objects. Once those `datetime` values are placed in a `DatetimeIndex`, the Series
 behaves like any other Series: arithmetic between two differently indexed series
 automatically aligns on the dates, scalar elements come back as `Timestamp`
-objects, and the index stores the data as NumPy's nanosecond `datetime64`.
+objects, and the index stores the data as NumPy's microsecond `datetime64`.
 
 This file covers building a timestamp-indexed Series, label-based indexing and
 selection (including passing date strings), slicing longer series by year /
@@ -16,7 +16,7 @@ DataFrame on its datetime rows, and time series with DUPLICATE indices
 
 KEY OPERATIONS IN THIS FILE
 METHOD/ATTRIBUTE      DESCRIPTION
-DatetimeIndex         Axis index built from datetimes (datetime64[ns] dtype)
+DatetimeIndex         Axis index built from datetimes (datetime64[us] dtype)
 ts["2001"]            String selection by year / year-month / exact date
 ts[start:end]         Range slice using dates not necessarily in the series
 truncate(after=)      Instance method slicing a Series between two dates
@@ -38,7 +38,7 @@ def explain_creating_a_time_series() -> None:
     Problem: build a Series whose index is a sequence of timestamps and see how
     pandas stores it.
     Why: passing a list of `datetime` objects as the index produces a
-    `DatetimeIndex` under the hood (dtype `datetime64[ns]`). Arithmetic between
+    `DatetimeIndex` under the hood (dtype `datetime64[us]`). Arithmetic between
     two time series aligns on the dates, so non-overlapping labels yield NaN;
     scalar values pulled from the index come back as `Timestamp` objects.
     """
@@ -52,13 +52,13 @@ def explain_creating_a_time_series() -> None:
     ]
     ts = pd.Series(rng.standard_normal(6), index=dates)
     print(ts)
-    print(ts.index)            # DatetimeIndex([...], dtype='datetime64[ns]')
+    print(ts.index)            # DatetimeIndex([...], dtype='datetime64[us]')
 
     # Arithmetic aligns on the dates; ts[::2] keeps every second row -> NaN gaps.
     print(ts + ts[::2])
 
-    # The index dtype is NumPy's nanosecond datetime64; scalars are Timestamps.
-    print(ts.index.dtype)      # datetime64[ns]
+    # The index dtype is NumPy's microsecond datetime64 (pandas 3.0 default); scalars are Timestamps.
+    print(ts.index.dtype)      # datetime64[us]
     stamp = ts.index[0]
     print(stamp)               # Timestamp('2011-01-02 00:00:00')
 

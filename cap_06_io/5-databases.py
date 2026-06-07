@@ -32,19 +32,16 @@ import pandas as pd
 import sqlalchemy as sqla
 
 
-def explain_sqlite3_driver() -> str:
+def explain_sqlite3_driver(db_path: str) -> None:
     """
     Problem: create a SQLite table, insert rows, and turn a SELECT into a DataFrame
     using only the stdlib driver.
     Why: most Python SQL drivers return query results as a list of tuples with no
     column names attached. The column names live in `cursor.description` (for
     SQLite, only the name field is populated). Combining the rows with those names
-    feeds the DataFrame constructor. Returns the db path for the SQLAlchemy demo.
+    feeds the DataFrame constructor.
     """
     print("== Low-level access with the sqlite3 driver ==")
-
-    tmp = tempfile.mkdtemp()
-    db_path = str(Path(tmp) / "mydata.sqlite")
 
     # Create a table with mixed column types.
     query = """
@@ -77,7 +74,6 @@ def explain_sqlite3_driver() -> str:
     print(frame)
 
     con.close()
-    return db_path
 
 
 def explain_sqlalchemy_read_sql(db_path: str) -> None:
@@ -96,8 +92,11 @@ def explain_sqlalchemy_read_sql(db_path: str) -> None:
 
 
 def main() -> None:
-    db_path = explain_sqlite3_driver()
-    explain_sqlalchemy_read_sql(db_path)
+    # One temporary directory shared by both demos; cleaned up on exit.
+    with tempfile.TemporaryDirectory() as tmp:
+        db_path = str(Path(tmp) / "mydata.sqlite")
+        explain_sqlite3_driver(db_path)
+        explain_sqlalchemy_read_sql(db_path)
 
 
 main()

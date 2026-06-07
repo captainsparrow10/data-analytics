@@ -169,8 +169,8 @@ def explain_summary_statistics_by_level() -> None:
     # Aggregate the rows by the "key2" level.
     print(frame.groupby(level="key2").sum())
     # Aggregate the columns by the "color" level (transpose -> group -> transpose).
-    # .sum() is typed broadly (could be a scalar); narrow to a DataFrame so the
-    # final .T resolves cleanly.
+    # .sum() is broadly typed by the pandas stubs (the return type is a wide union);
+    # narrow to a DataFrame — which it always is here — so the final .T resolves cleanly.
     by_color = frame.T.groupby(level="color").sum()
     assert isinstance(by_color, pd.DataFrame)
     print(by_color.T)

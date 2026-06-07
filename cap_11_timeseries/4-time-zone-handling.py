@@ -59,7 +59,7 @@ def explain_localization_and_conversion() -> None:
     # Localize the naive series to UTC, then convert to US Eastern.
     ts_utc = ts.tz_localize("UTC")
     print(ts_utc)
-    print(ts_utc.index)        # dtype datetime64[ns, UTC]
+    print(ts_utc.index)        # dtype datetime64[us, UTC]
     print(ts_utc.tz_convert("America/New_York"))
 
     # localize/convert also exist directly on a DatetimeIndex. A ZoneInfo object

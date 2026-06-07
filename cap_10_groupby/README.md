@@ -65,5 +65,5 @@ stubs; these are narrowed with a small `assert isinstance(...)` and a comment ra
 `cast`, preserving runtime behavior.
 
 pandas comes from the project's Poetry dependencies. See the [project README](../README.md) for
-setup and conventions, and [Chapter 3](../cap_05_pandas/README.md) for the established exercise
+setup and conventions, and [Chapter 5](../cap_05_pandas/README.md) for the established exercise
 pattern.

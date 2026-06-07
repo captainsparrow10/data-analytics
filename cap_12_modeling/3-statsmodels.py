@@ -35,11 +35,7 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from statsmodels.tsa.ar_model import AutoReg
 
-# One generator shared by the helpers so the synthetic data is reproducible.
-rng = np.random.default_rng(seed=12345)
-
-
-def dnorm(mean: float, variance: float, size: int = 1) -> np.ndarray:
+def dnorm(mean: float, variance: float, size: int, rng: np.random.Generator) -> np.ndarray:
     """Generate normally distributed data with a given mean and variance."""
     return mean + np.sqrt(variance) * rng.standard_normal(size)
 
@@ -55,13 +51,14 @@ def explain_linear_model_array_api() -> None:
     """
     print("== Estimating a linear model (array API: sm.OLS) ==")
 
+    rng = np.random.default_rng(seed=12345)
     N = 100
     X = np.c_[
-        dnorm(0, 0.4, size=N),
-        dnorm(0, 0.6, size=N),
-        dnorm(0, 0.2, size=N),
+        dnorm(0, 0.4, size=N, rng=rng),
+        dnorm(0, 0.6, size=N, rng=rng),
+        dnorm(0, 0.2, size=N, rng=rng),
     ]
-    eps = dnorm(0, 0.1, size=N)
+    eps = dnorm(0, 0.1, size=N, rng=rng)
     beta = [0.1, 0.3, 0.5]            # the "true" model parameters
     y = np.dot(X, beta) + eps
     print(X[:5])
@@ -87,13 +84,14 @@ def explain_linear_model_formula_api() -> None:
     """
     print("== Estimating a linear model (formula API: smf.ols) ==")
 
+    rng = np.random.default_rng(seed=42)
     N = 100
     X = np.c_[
-        dnorm(0, 0.4, size=N),
-        dnorm(0, 0.6, size=N),
-        dnorm(0, 0.2, size=N),
+        dnorm(0, 0.4, size=N, rng=rng),
+        dnorm(0, 0.6, size=N, rng=rng),
+        dnorm(0, 0.2, size=N, rng=rng),
     ]
-    eps = dnorm(0, 0.1, size=N)
+    eps = dnorm(0, 0.1, size=N, rng=rng)
     beta = [0.1, 0.3, 0.5]
     y = np.dot(X, beta) + eps
 
@@ -121,12 +119,13 @@ def explain_time_series_ar() -> None:
     """
     print("== Estimating a time series process (AutoReg) ==")
 
+    rng = np.random.default_rng(seed=99)
     init_x = 4
     values = [init_x, init_x]
     N = 1000
     b0 = 0.8
     b1 = -0.4
-    noise = dnorm(0, 0.1, N)
+    noise = dnorm(0, 0.1, N, rng=rng)
     for i in range(N):
         new_x = values[-1] * b0 + values[-2] * b1 + noise[i]
         values.append(new_x)

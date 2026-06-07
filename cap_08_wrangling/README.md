@@ -45,5 +45,5 @@ NumPy **2.4.6**:
 - The book reads `examples/macrodata.csv`; to stay offline that frame is rebuilt inline (file 4).
 
 pandas comes from the project's Poetry dependencies. See the [project README](../README.md)
-for setup and conventions, and [Chapter 3](../cap_05_pandas/README.md) for the established
+for setup and conventions, and [Chapter 5](../cap_05_pandas/README.md) for the established
 exercise pattern.

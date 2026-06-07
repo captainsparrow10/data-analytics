@@ -25,7 +25,7 @@ chisquare       Draw samples from a chi-square distribution
 gamma           Draw samples from a gamma distribution
 
 Run:
-    python3 cap_04_numpy/3-pseudorandom-number-generation.py
+    poetry run python cap_04_numpy/3-pseudorandom-number-generation.py
 """
 
 import numpy as np

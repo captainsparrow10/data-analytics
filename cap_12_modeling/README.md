@@ -52,4 +52,4 @@ All four files run clean under `python -W error` (no Future/DeprecationWarning) 
 chapter type-checks at **0 errors** with pyright.
 
 See the [project README](../README.md) for setup and conventions, and
-[Chapter 3](../cap_05_pandas/README.md) for the established exercise pattern.
+[Chapter 5](../cap_05_pandas/README.md) for the established exercise pattern.

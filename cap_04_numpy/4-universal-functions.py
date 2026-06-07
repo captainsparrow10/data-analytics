@@ -47,7 +47,7 @@ logical_or,
 logical_xor     Element-wise truth values of &, |, ^ logical operations
 
 Run:
-    python3 cap_04_numpy/3-universal-functions.py
+    poetry run python cap_04_numpy/4-universal-functions.py
 """
 
 import numpy as np

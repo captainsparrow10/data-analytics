@@ -77,10 +77,10 @@ def explain_transform_with_mapping() -> None:
         "honey ham": "pig",
         "nova lox": "salmon",
     }
-    # map with a dict-like lookup gives the animal for each food. (The pandas
-    # stubs only type map's argument as a callable, so we pass the dict's bound
-    # .get method, which is exactly the lookup the book's dict performs.)
-    data["animal"] = data["food"].map(meat_to_animal.get)
+    # map with a dict lookup gives the animal for each food. Using a lambda
+    # (rather than .get) preserves the book's KeyError-on-missing semantics: an
+    # unexpected food name raises immediately instead of silently returning None.
+    data["animal"] = data["food"].map(lambda name: meat_to_animal[name])
     print(data)
 
     # We could also pass a function that does all the work.

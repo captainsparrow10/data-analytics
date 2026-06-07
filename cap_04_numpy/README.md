@@ -1,4 +1,4 @@
-# Chapter 2 — NumPy Basics: Arrays and Vectorized Computation
+# Chapter 4 — NumPy Basics: Arrays and Vectorized Computation
 
 NumPy (Numerical Python) is the foundation of the scientific Python stack. Its core is
 the `ndarray`, a fast, memory-efficient multidimensional array that enables *vectorized*
@@ -6,7 +6,7 @@ computation — expressing operations on whole arrays at once instead of writing
 loops. This chapter covers arrays, indexing, universal functions, array-oriented
 programming, linear algebra, and pseudorandom generation.
 
-Same format as Chapter 1: every file is self-documenting and runnable — a module
+Same format as Chapter 3: every file is self-documenting and runnable — a module
 docstring explains the topic and its operations, and each exercise is a function
 documenting the problem, its purpose, the input, the expected output, and *why* the
 solution is written that way.
@@ -29,9 +29,9 @@ The full chapter, in strict book order (4.1 → 4.7), one file per sub-section:
 ## Running
 
 ```bash
-python3 cap_04_numpy/1-ndarray-basics.py   # runs every exercise in the file
+poetry run python cap_04_numpy/1-ndarray-basics.py   # runs every exercise in the file
 ```
 
 NumPy comes from the project's Poetry dependencies (installed automatically by the
 devcontainer). See the [project README](../README.md) for setup and conventions, and
-[Chapter 1](../cap_03_built-in/README.md) for the established exercise pattern.
+[Chapter 3](../cap_03_built-in/README.md) for the established exercise pattern.

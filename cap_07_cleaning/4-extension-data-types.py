@@ -22,6 +22,7 @@ Run:
     poetry run python cap_07_cleaning/4-extension-data-types.py
 """
 
+import pyarrow as pa
 import pandas as pd
 
 
@@ -111,8 +112,6 @@ def explain_arrow_backed() -> None:
     show it is available (it requires the pyarrow library).
     """
     print("== Arrow-backed dtypes (brief) ==")
-
-    import pyarrow as pa  # available in this environment
 
     # pd.ArrowDtype wraps a pyarrow type; here, a 64-bit integer column.
     s = pd.Series([1, 2, 3, None], dtype=pd.ArrowDtype(pa.int64()))
