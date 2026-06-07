@@ -25,6 +25,9 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 | 13 | Data Analysis Examples | [cap_13_examples/](cap_13_examples/README.md) |
 | A | Advanced NumPy (appendix) | [cap_a_advanced-numpy/](cap_a_advanced-numpy/README.md) |
 
+A `challenges/` folder is a sandbox for designing and solving your **own** complex,
+integrative exercises — see [challenges/](challenges/README.md).
+
 ## Chapter 3 — Built-ins (`cap_03_built-in/`)
 
 ```
