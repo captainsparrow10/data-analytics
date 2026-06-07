@@ -12,9 +12,9 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 
 | # | Chapter | Index |
 |---|---------|-------|
-| 1 | Python Built-ins | [cap_03_built-in/](cap_03_built-in/README.md) |
-| 2 | NumPy Basics: Arrays and Vectorized Computation | [cap_04_numpy/](cap_04_numpy/README.md) |
-| 3 | Getting Started with pandas | [cap_05_pandas/](cap_05_pandas/README.md) |
+| 3 | Built-in Data Structures, Functions, and Files | [cap_03_built-in/](cap_03_built-in/README.md) |
+| 4 | NumPy Basics: Arrays and Vectorized Computation | [cap_04_numpy/](cap_04_numpy/README.md) |
+| 5 | Getting Started with pandas | [cap_05_pandas/](cap_05_pandas/README.md) |
 | 6 | Data Loading, Storage, and File Formats | [cap_06_io/](cap_06_io/README.md) |
 | 7 | Data Cleaning and Preparation | [cap_07_cleaning/](cap_07_cleaning/README.md) |
 | 8 | Data Wrangling: Join, Combine, and Reshape | [cap_08_wrangling/](cap_08_wrangling/README.md) |
@@ -161,7 +161,7 @@ cap_13_examples/
 Each file runs end to end and prints the result of every exercise:
 
 ```bash
-python3 cap_03_built-in/data-structures/3-set.py
+poetry run python cap_03_built-in/data-structures/3-set.py
 ```
 
 ## Conventions (read this before editing)
