@@ -12,3 +12,6 @@ venv/
 
 # macOS
 .DS_Store
+
+# Books / reference PDFs (no versionar binarios pesados)
+*.pdf
