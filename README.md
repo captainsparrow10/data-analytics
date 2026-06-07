@@ -14,6 +14,7 @@ The exercises are adapted from the [PYnative](https://pynative.com/) practice se
 |---|---------|-------|
 | 1 | Python Built-ins | [cap_01_built-in/](cap_01_built-in/README.md) |
 | 2 | NumPy Basics: Arrays and Vectorized Computation | [cap_02_numpy/](cap_02_numpy/README.md) |
+| 3 | Getting Started with pandas | [cap_03_panda/](cap_03_panda/README.md) |
 
 ## Chapter 1 — Built-ins (`cap_01_built-in/`)
 
@@ -38,6 +39,18 @@ cap_01_built-in/
 └── stdlib/
     ├── 1-regex.py             # regular expressions (30 exercises)
     └── 2-random.py            # random / secrets    (10 exercises)
+```
+
+## Chapter 3 — pandas (`cap_03_panda/`)
+
+```
+cap_03_panda/
+├── 1-series.py                    # Series: creation, index, selection, dict interop, name   (5.1)
+├── 2-dataframe.py                 # DataFrame: construction, loc/iloc, del, .T, to_numpy      (5.1)
+├── 3-index-objects.py             # Index: immutability, set logic, duplicates, methods       (5.1)
+├── 4-essential-functionality.py   # reindex, drop, indexing/filtering, arithmetic & alignment (5.2)
+├── 5-function-sorting-ranking.py  # apply/map, sort_index/sort_values, rank, duplicate labels (5.2)
+└── 6-descriptive-statistics.py    # reductions, describe, corr/cov/corrwith, unique/counts    (5.3)
 ```
 
 ## Running an exercise file
@@ -105,22 +118,50 @@ python database/connection.py   # prints the PostgreSQL server version
 > `ports: ["5433:5432"]` to the `db` service and use `localhost:5433` — but that breaks
 > the "isolated" guarantee, so only do it if you really need host access.
 
-## Dependencies
+## Local setup (Poetry)
 
-Managed with Poetry. The data stack (numpy, pandas, matplotlib, IPython, Jupyter, SciPy,
-scikit-learn, statsmodels) plus `psycopg2-binary` are declared in `pyproject.toml`. The
-devcontainer installs them automatically on creation (`poetry install`). To add more:
+Dependencies are managed with [Poetry](https://python-poetry.org/). The full data stack
+(numpy, pandas, matplotlib, IPython, Jupyter, SciPy, scikit-learn, statsmodels) plus
+`psycopg2-binary` is declared in `pyproject.toml` using the modern PEP 621 `[project]`
+table; `pyright` is a dev-only dependency. The virtualenv lives **inside the repo** at
+`.venv/` (git-ignored) and is built on the single Homebrew Python — no extra Python
+versions are installed.
+
+First-time setup on macOS:
+
+```bash
+brew install python poetry                          # if not already installed
+poetry config virtualenvs.in-project true           # keep the venv at ./.venv
+poetry env use "$(brew --prefix)/bin/python3"       # create .venv with Homebrew Python
+poetry install                                      # runtime + dev dependencies
+```
+
+Everyday use — run anything inside the environment with `poetry run`:
+
+```bash
+poetry run python cap_02_numpy/1-ndarray-basics.py  # run an exercise file
+poetry shell                                        # or drop into the venv
+```
+
+Add or remove packages (updates `pyproject.toml` + `poetry.lock`):
 
 ```bash
 poetry add <package>
+poetry add --group dev <package>                    # dev-only tool
 ```
+
+> **Heads-up if you also use the devcontainer.** It builds its own *Linux* `.venv`
+> (Python under `/usr/local/bin`). That venv is invalid on a macOS host and makes every
+> `poetry` command fail with `[Errno 2] No such file or directory: 'python'`. Fix: remove
+> it and recreate locally — `rm -rf .venv && poetry env use "$(brew --prefix)/bin/python3"`.
 
 ## Type checking
 
-The project is checked with [pyright](https://github.com/microsoft/pyright) in
-**strict** mode (configured in `pyproject.toml` under `[tool.pyright]`, the same rules
-Pylance applies in the editor). Every file is kept at **0 type errors**.
+Checked with [pyright](https://github.com/microsoft/pyright) in **strict** mode
+(configured in `pyproject.toml` under `[tool.pyright]`; `venvPath`/`venv` point it at the
+in-project `.venv` so third-party types resolve). Every file is kept at **0 errors**.
 
 ```bash
-npx -y pyright@latest
+poetry run pyright                # whole project
+poetry run pyright cap_02_numpy   # a single chapter
 ```
